@@ -4,6 +4,7 @@ gem "faraday", "~> 0.6"
 gem "faraday_middleware", "~> 0.6"
 gem "hashie", "~> 1.0.0"
 gem "multi_json", "~> 1.0.0"
+gem "chronic", "~> 0.4.0"
 
 group :development do
   gem "rspec", "~> 2.6.0"

@@ -16,8 +16,9 @@ describe Genability::Client do
         use_vcr_cassette "load_serving_entities"
 
         it "should return an array of load serving entities" do
-          @client.load_serving_entities.should be_an Array
-          @client.load_serving_entities.first.name.should == "Infinite Energy Inc"
+          lses = @client.load_serving_entities
+          lses.should be_an Array
+          lses.first.name.should == "Infinite Energy Inc"
         end
 
         it "should return 25 results by default" do
@@ -30,12 +31,6 @@ describe Genability::Client do
 
         it "should accept a pageStart parameter" do
           @client.load_serving_entities(:page => 2).first.name.should == "Nooruddin Investments LLC"
-        end
-
-        it "should accept a wildCardText parameter" do
-          @client.load_serving_entities(:search => 'Infinite').each do |result|
-            result.name.should =~ /Infinite/
-          end
         end
 
         it "should accept a startsWithWildCard parameter" do
@@ -52,7 +47,7 @@ describe Genability::Client do
 
         it "should accept a containsWildCard parameter" do
           @client.load_serving_entities(:contains => 'Energy').each do |result|
-            result.name.should =~ /.+Energy.+/
+            result.name.should =~ /Energy/
           end
         end
 
@@ -63,8 +58,9 @@ describe Genability::Client do
         use_vcr_cassette "load_serving_entity"
 
         it "should return a load serving entity" do
-          @client.load_serving_entity(2756).should be_a Hashie::Mash
-          @client.load_serving_entity(2756).name.should == "Georgia Power Co"
+          lse = @client.load_serving_entity(2756)
+          lse.should be_a Hashie::Mash
+          lse.name.should == "Georgia Power Co"
         end
 
       end

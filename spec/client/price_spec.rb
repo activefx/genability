@@ -15,9 +15,16 @@ describe Genability::Client do
 
         use_vcr_cassette "prices"
 
-        it "should return a price" do
-          @client.prices(520).should be_an Hashie::Mash
-          @client.tariffId.should == 520
+        it "should return an array of prices" do
+          prices = @client.prices(520, "2011-07-01T09:38:22.7-0400")
+          prices.should be_an Array
+          prices.first.tariffId.should == 520
+        end
+
+        it "should accept toDateTime, territoryId, consumptionAmount and demandAmount parameters" do
+          @client.prices(520, "2011-06-24T09:38:22.7-0400",
+            :to => "2011-07-01T09:38:22.7-0400", :consumption_amount => 500).
+            first.tariffId.should == 520
         end
 
       end

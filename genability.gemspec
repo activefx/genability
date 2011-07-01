@@ -9,22 +9,48 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Solt"]
-  s.date = %q{2011-06-28}
+  s.date = %q{2011-07-01}
   s.description = %q{Ruby client for the Genability power pricing and related APIs - learn more at https://developer.genability.com}
   s.email = %q{mattsolt@gmail.com}
   s.extra_rdoc_files = [
-    "LICENSE.txt",
-    "README.rdoc"
+    "LICENSE.md",
+    "README.md"
   ]
   s.files = [
     ".document",
     ".rspec",
+    ".yardopts",
     "Gemfile",
-    "LICENSE.txt",
-    "README.rdoc",
+    "HISTORY.md",
+    "LICENSE.md",
+    "README.md",
     "Rakefile",
     "VERSION",
+    "genability.gemspec",
+    "lib/faraday/response/raise_http_4xx.rb",
+    "lib/faraday/response/raise_http_5xx.rb",
     "lib/genability.rb",
+    "lib/genability/api.rb",
+    "lib/genability/client.rb",
+    "lib/genability/client/helpers.rb",
+    "lib/genability/client/load_serving_entity.rb",
+    "lib/genability/client/price.rb",
+    "lib/genability/client/season.rb",
+    "lib/genability/client/tariff.rb",
+    "lib/genability/client/territory.rb",
+    "lib/genability/client/time_of_use.rb",
+    "lib/genability/client/zip_code.rb",
+    "lib/genability/configuration.rb",
+    "lib/genability/connection.rb",
+    "lib/genability/error.rb",
+    "lib/genability/request.rb",
+    "spec/cassettes/load_serving_entities.yml",
+    "spec/cassettes/load_serving_entity.yml",
+    "spec/cassettes/prices.yml",
+    "spec/client/load_serving_entity_spec.rb",
+    "spec/client/price_spec.rb",
+    "spec/configuration.yml.sample",
+    "spec/faraday/response_spec.rb",
     "spec/genability_spec.rb",
     "spec/spec_helper.rb"
   ]
@@ -43,6 +69,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<faraday_middleware>, ["~> 0.6"])
       s.add_runtime_dependency(%q<hashie>, ["~> 1.0.0"])
       s.add_runtime_dependency(%q<multi_json>, ["~> 1.0.0"])
+      s.add_runtime_dependency(%q<chronic>, ["~> 0.4.0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.6.0"])
       s.add_development_dependency(%q<yard>, ["~> 0.7.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -55,6 +82,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<faraday_middleware>, ["~> 0.6"])
       s.add_dependency(%q<hashie>, ["~> 1.0.0"])
       s.add_dependency(%q<multi_json>, ["~> 1.0.0"])
+      s.add_dependency(%q<chronic>, ["~> 0.4.0"])
       s.add_dependency(%q<rspec>, ["~> 2.6.0"])
       s.add_dependency(%q<yard>, ["~> 0.7.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -68,6 +96,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<faraday_middleware>, ["~> 0.6"])
     s.add_dependency(%q<hashie>, ["~> 1.0.0"])
     s.add_dependency(%q<multi_json>, ["~> 1.0.0"])
+    s.add_dependency(%q<chronic>, ["~> 0.4.0"])
     s.add_dependency(%q<rspec>, ["~> 2.6.0"])
     s.add_dependency(%q<yard>, ["~> 0.7.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])

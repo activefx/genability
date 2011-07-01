@@ -1,4 +1,5 @@
 require 'faraday_middleware'
+require 'faraday/request/url_encoding_fix'
 require 'faraday/response/raise_http_4xx'
 require 'faraday/response/raise_http_5xx'
 
@@ -22,6 +23,7 @@ module Genability
 
       Faraday::Connection.new(options) do |connection|
         #connection.use Faraday::Request::OAuth2, client_id, access_token
+        connection.use Faraday::Request::UrlEncodingFix
         connection.use Faraday::Response::RaiseHttp4xx
         connection.use Faraday::Response::Mashify unless raw
         unless raw

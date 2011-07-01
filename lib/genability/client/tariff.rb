@@ -2,13 +2,6 @@ module Genability
   class Client
 
     module Tariff
-
-      # populateRates Boolean Populates the rate details for this Tariff
-      def tariff(tariff_id, params = {})
-        params["populateRates"] = params[:populate_rates] if params[:populate_rates]
-        get("tariffs/#{tariff_id}", params).results
-      end
-
       # lseId Long Filter tariffs for a specific LSE (Optional)
       # effectiveOn Date Only tariffs that are effective on this date (Optional)
       # customerClasses String[] Only include these customer classes. Choices are: RESIDENTIAL, GENERAL (Optional)
@@ -25,6 +18,11 @@ module Genability
         get("tariffs", params).results
       end
 
+      # populateRates Boolean Populates the rate details for this Tariff
+      def tariff(tariff_id, params = {})
+        params["populateRates"] = params[:populate_rates] if params[:populate_rates]
+        get("tariffs/#{tariff_id}", params).results
+      end
 
     end
   end
