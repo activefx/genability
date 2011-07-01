@@ -23,13 +23,13 @@ describe Genability::Client do
         it "should return an array of prices" do
           prices = @client.prices(520, "2011-07-01T09:38:22.7-0400")
           prices.should be_an Array
-          prices.first.tariffId.should == 520
+          prices.first.tariff_id.should == 520
         end
 
         it "should accept toDateTime, territoryId, consumptionAmount and demandAmount parameters" do
           @client.prices(520, "2011-06-24T09:38:22.7-0400",
             :to => "2011-07-01T09:38:22.7-0400", :consumption_amount => 500).
-            first.tariffId.should == 520
+            first.tariff_id.should == 520
         end
 
       end

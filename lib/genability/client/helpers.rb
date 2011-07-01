@@ -20,6 +20,15 @@ module Genability
         "true"
       end
 
+      def multi_option_handler(value)
+        return nil if value.nil?
+        if value.is_a?(Array)
+          value.collect{|x| x.upcase}.join(',')
+        else
+          value.upcase
+        end
+      end
+
       def format_to_iso8601(date_time = nil)
         if date_time.respond_to?(:iso8601)
           genability_iso8601_converter(date_time)
