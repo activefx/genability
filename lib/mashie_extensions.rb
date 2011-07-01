@@ -1,5 +1,6 @@
 require 'hashie/mash'
 
+# @private
 class Hashie::Mash
 
   # Modified Hashie::Mash method missing
