@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Fri, 01 Jul 2011 16:32:58 GMT
+      - Fri, 01 Jul 2011 18:52:49 GMT
     body: "{\"status\":\"success\",\"count\":1,\"type\":\"SeasonGroup\",\"results\":[{\"lseId\":null,\"seasons\":[{\"seasonId\":280,\"lseId\":734,\"seasonGroupId\":1,\"seasonName\":\"Summer\",\"seasonFromMonth\":5,\"seasonFromDay\":1,\"seasonToMonth\":10,\"seasonToDay\":31},{\"seasonId\":281,\"lseId\":734,\"seasonGroupId\":1,\"seasonName\":\"Winter\",\"seasonFromMonth\":11,\"seasonFromDay\":1,\"seasonToMonth\":4,\"seasonToDay\":30}],\"seasonGroupId\":1}]}"
     http_version: "1.1"
