@@ -15,6 +15,11 @@ describe Genability::Client do
 
         use_vcr_cassette "prices"
 
+        it "should allow underscored method names" do
+          price = @client.prices(520, "2011-07-01T09:38:22.7-0400").first
+          price.tariffId.should == price.tariff_id
+        end
+
         it "should return an array of prices" do
           prices = @client.prices(520, "2011-07-01T09:38:22.7-0400")
           prices.should be_an Array
