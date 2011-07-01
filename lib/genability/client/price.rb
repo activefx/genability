@@ -14,7 +14,13 @@ module Genability
         params["territoryId"] = params[:territory_id] if params[:territory_id]
         params["consumptionAmount"] = params[:consumption_amount] if params[:consumption_amount]
         params["demandAmount"] = params[:demand_amount] if params[:demand_amount]
-        get("prices", params).results
+        get("prices/#{tariff_id}", params).results
+      end
+
+      private
+
+      def prices_params(options)
+
       end
 
 

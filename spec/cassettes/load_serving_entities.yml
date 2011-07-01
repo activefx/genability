@@ -1,0 +1,217 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses.json?appId=ValidAppID&appKey=ValidAppKey
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 30 Jun 2011 00:30:42 GMT
+    body: "{\"status\":\"success\",\"count\":3154,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3155,\"name\":\"Infinite Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3154,\"name\":\"Pennywise Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3153,\"name\":\"Nooruddin Investments LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3152,\"name\":\"Nations Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3151,\"name\":\"Potentia Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3150,\"name\":\"Andeler Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3149,\"name\":\"Our Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3148,\"name\":\"Gateway Energy Services Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3147,\"name\":\"Bounce Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3146,\"name\":\"Frontier Utilities Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3145,\"name\":\"Texpo Power LP\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3144,\"name\":\"Fulcrum Retail Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null}]}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses.json?appId=ValidAppID&appKey=ValidAppKey
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 30 Jun 2011 00:30:42 GMT
+    body: "{\"status\":\"success\",\"count\":3154,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3155,\"name\":\"Infinite Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3154,\"name\":\"Pennywise Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3153,\"name\":\"Nooruddin Investments LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3152,\"name\":\"Nations Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3151,\"name\":\"Potentia Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3150,\"name\":\"Andeler Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3149,\"name\":\"Our Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3148,\"name\":\"Gateway Energy Services Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3147,\"name\":\"Bounce Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3146,\"name\":\"Frontier Utilities Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3145,\"name\":\"Texpo Power LP\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3144,\"name\":\"Fulcrum Retail Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null}]}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses.json?appId=ValidAppID&appKey=ValidAppKey&pageCount=10
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 30 Jun 2011 00:30:44 GMT
+    body: "{\"status\":\"success\",\"count\":3154,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3155,\"name\":\"Infinite Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3154,\"name\":\"Pennywise Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3153,\"name\":\"Nooruddin Investments LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3152,\"name\":\"Nations Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3151,\"name\":\"Potentia Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3150,\"name\":\"Andeler Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3149,\"name\":\"Our Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3148,\"name\":\"Gateway Energy Services Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3147,\"name\":\"Bounce Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3146,\"name\":\"Frontier Utilities Inc\",\"code\":\"\",\"websiteHome\":null}]}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses.json?appId=ValidAppID&appKey=ValidAppKey&pageStart=2
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 30 Jun 2011 00:30:44 GMT
+    body: "{\"status\":\"success\",\"count\":3154,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3153,\"name\":\"Nooruddin Investments LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3152,\"name\":\"Nations Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3151,\"name\":\"Potentia Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3150,\"name\":\"Andeler Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3149,\"name\":\"Our Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3148,\"name\":\"Gateway Energy Services Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3147,\"name\":\"Bounce Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3146,\"name\":\"Frontier Utilities Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3145,\"name\":\"Texpo Power LP\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3144,\"name\":\"Fulcrum Retail Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null},{\"lseId\":15,\"name\":\"KBR Rural Public Power District\",\"code\":\"10065\",\"websiteHome\":null},{\"lseId\":16,\"name\":\"K C Electric Association\",\"code\":\"10066\",\"websiteHome\":null}]}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses.json?appId=ValidAppID&appKey=ValidAppKey&wildCardText=Infinite
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 30 Jun 2011 00:30:45 GMT
+    body: "{\"status\":\"success\",\"count\":3154,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3155,\"name\":\"Infinite Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3154,\"name\":\"Pennywise Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3153,\"name\":\"Nooruddin Investments LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3152,\"name\":\"Nations Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3151,\"name\":\"Potentia Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3150,\"name\":\"Andeler Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3149,\"name\":\"Our Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3148,\"name\":\"Gateway Energy Services Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3147,\"name\":\"Bounce Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3146,\"name\":\"Frontier Utilities Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3145,\"name\":\"Texpo Power LP\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3144,\"name\":\"Fulcrum Retail Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null}]}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses.json?appId=ValidAppID&appKey=ValidAppKey&startsWithWildCard=true&wildCardText=In
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 30 Jun 2011 00:30:45 GMT
+    body: "{\"status\":\"success\",\"count\":3154,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3155,\"name\":\"Infinite Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3154,\"name\":\"Pennywise Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3153,\"name\":\"Nooruddin Investments LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3152,\"name\":\"Nations Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3151,\"name\":\"Potentia Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3150,\"name\":\"Andeler Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3149,\"name\":\"Our Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3148,\"name\":\"Gateway Energy Services Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3147,\"name\":\"Bounce Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3146,\"name\":\"Frontier Utilities Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3145,\"name\":\"Texpo Power LP\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3144,\"name\":\"Fulcrum Retail Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null}]}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses.json?appId=ValidAppID&appKey=ValidAppKey&endsWithWildCard=true&wildCardText=Inc
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 30 Jun 2011 00:30:46 GMT
+    body: "{\"status\":\"success\",\"count\":3154,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3155,\"name\":\"Infinite Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3154,\"name\":\"Pennywise Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3153,\"name\":\"Nooruddin Investments LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3152,\"name\":\"Nations Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3151,\"name\":\"Potentia Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3150,\"name\":\"Andeler Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3149,\"name\":\"Our Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3148,\"name\":\"Gateway Energy Services Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3147,\"name\":\"Bounce Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3146,\"name\":\"Frontier Utilities Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3145,\"name\":\"Texpo Power LP\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3144,\"name\":\"Fulcrum Retail Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null}]}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses.json?appId=ValidAppID&appKey=ValidAppKey&containsWildCard=true&wildCardText=Energy
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Thu, 30 Jun 2011 00:30:46 GMT
+    body: "{\"status\":\"success\",\"count\":3154,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3155,\"name\":\"Infinite Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3154,\"name\":\"Pennywise Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3153,\"name\":\"Nooruddin Investments LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3152,\"name\":\"Nations Power LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3151,\"name\":\"Potentia Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3150,\"name\":\"Andeler Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3149,\"name\":\"Our Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3148,\"name\":\"Gateway Energy Services Corporation\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3147,\"name\":\"Bounce Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3146,\"name\":\"Frontier Utilities Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3145,\"name\":\"Texpo Power LP\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":3144,\"name\":\"Fulcrum Retail Energy LLC\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null}]}"
+    http_version: "1.1"
