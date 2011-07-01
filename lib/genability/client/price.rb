@@ -26,7 +26,7 @@ module Genability
       #     Genability.prices(520, "Last friday at 6:45pm", :to => "yesterday afternoon", :consumption_amount => 500)
       # @format :json
       # @authenticated true
-      # @rate_limited false
+      # @rate_limited true
       # @see https://developer.genability.com/documentation/api-reference/public/price
       def prices(tariff_id, *args)
         options = args.last.is_a?(Hash) ? args.pop : {}

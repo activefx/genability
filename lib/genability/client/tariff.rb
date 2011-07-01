@@ -14,7 +14,7 @@ module Genability
       #
       # @format :json
       # @authenticated true
-      # @rate_limited false
+      # @rate_limited true
       # @param options [Hash] A customizable set of options.
       # @option options [Integer] :lse_id Filter tariffs for a specific Load Serving Entity. (Optional)
       # @option options [Date] :effective_on  Only tariffs that are effective on this date. (Optional)
@@ -42,7 +42,7 @@ module Genability
       #
       # @format :json
       # @authenticated true
-      # @rate_limited false
+      # @rate_limited true
       # @param tariff_id [Integer] Unique Genability ID (primary key) for a tariff.
       # @param options [Hash] A customizable set of options.
       # @option options [Boolean] :populate_rates Populates the rate details for the returned Tariff. (Optional)

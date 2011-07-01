@@ -15,7 +15,7 @@ module Genability
       #
       # @format :json
       # @authenticated true
-      # @rate_limited false
+      # @rate_limited true
       # @param options [Hash] A customizable set of options.
       # @option options [String] :starts_with  Indicates the search phrase should match the start of the name. (Optional)
       # @option options [String] :ends_with Indicates the search phrase should match the end of the name. (Optional)
@@ -48,7 +48,7 @@ module Genability
       #
       # @format :json
       # @authenticated true
-      # @rate_limited false
+      # @rate_limited true
       # @param load_serving_entity_id [Integer] Unique Genability ID (primary key) for a Load Serving Entity.
       # @return [Hashie::Mash] Details for a load serving entity.
       # @see https://developer.genability.com/documentation/api-reference/public/lse
