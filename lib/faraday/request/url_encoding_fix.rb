@@ -1,7 +1,9 @@
 require 'faraday'
 require 'addressable/uri'
 
+# @private
 module Faraday
+  # @private
   class Request::UrlEncodingFix < Faraday::Middleware
 
     def call(env)
