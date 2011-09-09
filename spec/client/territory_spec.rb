@@ -21,6 +21,15 @@ describe Genability::Client do
           territories.first.territory_id.should == 807
         end
 
+        it "should get the territory ID from a zipcode" do
+          territories = @client.territories(
+                          :lse_id => 734,
+                          :contains_item_type => 'ZIPCODE',
+                          :contains_item_value => 94115,
+                          :master_tariff_id => 522)
+          territories.first.territory_id.should == 3538
+        end
+
       end
 
       context ".territory" do
