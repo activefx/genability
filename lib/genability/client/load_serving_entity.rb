@@ -17,9 +17,9 @@ module Genability
       # @authenticated true
       # @rate_limited true
       # @param options [Hash] A customizable set of options.
+      # @option options [String] :search_string Phrase for searching the names of Load Serving Entities (Optional)
       # @option options [String] :starts_with  Indicates the search phrase should match the start of the name. (Optional)
       # @option options [String] :ends_with Indicates the search phrase should match the end of the name. (Optional)
-      # @option options [String] :contains Indicates the search phrase should be somewhere in the middle of the name. (Optional)
       # @option options [Integer] :page The page number to begin the result set from. If not specified, this will begin with the first result set. (Optional)
       # @option options [Integer] :per_page The number of results to return. If not specified, this will return 25 results. (Optional)
       # @return [Array] List of load serving entities.
@@ -35,7 +35,7 @@ module Genability
       # @example Search for load serving entities ending with the word 'Inc'
       #   Genability.load_serving_entities(:ends_with => 'Inc')
       # @example Search for load serving entities with the word 'Energy'
-      #   Genability.load_serving_entities(:contains => 'Energy')
+      #   Genability.load_serving_entities(:search_string => 'Energy')
       def load_serving_entities(options={})
         get("lses", lses_params(options)).results
       end
@@ -62,11 +62,14 @@ module Genability
 
       def lses_params(options)
         {
-          'wildCardText' => options[:contains] || options[:starts_with] || options[:ends_with],
-          'startsWithWildCard' => convert_to_boolean(options[:starts_with]),
-          'endsWithWildCard' => convert_to_boolean(options[:ends_with]),
-          'containsWildCard' => convert_to_boolean(options[:contains])
+          'searchString' => search_string(options),
+          'startsWith' => convert_to_boolean(options[:starts_with]),
+          'endsWith' => convert_to_boolean(options[:ends_with])
         }.delete_if{ |k,v| v.nil? }.merge( pagination_params(options) )
+      end
+
+      def search_string(options)
+        options[:search_string] || options[:contains] || options[:starts_with] || options[:ends_with]
       end
 
     end
