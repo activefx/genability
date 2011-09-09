@@ -37,7 +37,7 @@ module Genability
       # @example Search for load serving entities with the word 'Energy'
       #   Genability.load_serving_entities(:search_string => 'Energy')
       def load_serving_entities(options={})
-        get("lses", lses_params(options)).results
+        get("public/lses", lses_params(options)).results
       end
 
       alias :lses :load_serving_entities
@@ -53,7 +53,7 @@ module Genability
       # @example Return the details for Georgia Power Co
       #   Genability.load_serving_entity(2756)
       def load_serving_entity(load_serving_entity_id)
-        get("lses/#{load_serving_entity_id}").results.first
+        get("public/lses/#{load_serving_entity_id}").results.first
       end
 
       alias :lse :load_serving_entity

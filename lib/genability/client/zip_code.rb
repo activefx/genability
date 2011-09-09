@@ -17,7 +17,7 @@ module Genability
       # @example Return the details for the 48322 zipcode
       #   Genability.zipcode('48322')
       def zipcode(zipcode)
-        get("zipcodes/#{zipcode}").results.first
+        get("public/zipcodes/#{zipcode}").results.first
       end
 
       alias :zip_code :zipcode

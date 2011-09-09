@@ -18,7 +18,7 @@ module Genability
       # @example Return a list of season groups for Pacific Gas & Electric Co
       #   Genability.seasons(734)
       def seasons(load_serving_entity_id)
-        get("seasons", { :lseId => load_serving_entity_id }).results
+        get("public/seasons", { :lseId => load_serving_entity_id }).results
       end
 
     end

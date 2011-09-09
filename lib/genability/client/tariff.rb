@@ -35,7 +35,7 @@ module Genability
       # @example Return only default and alternative tariff types
       #   Genability.tariffs(:tariff_types => ['default', 'alternative'])
       def tariffs(options = {})
-        get("tariffs", tariffs_params(options)).results
+        get("public/tariffs", tariffs_params(options)).results
       end
 
       # Returns one tariff.
@@ -51,7 +51,7 @@ module Genability
       # @example Return the residential serice tariff for Georgia Power Co
       #   Genability.tariff(512)
       def tariff(tariff_id, options = {})
-        get("tariffs/#{tariff_id}", tariff_params(options)).results.first
+        get("public/tariffs/#{tariff_id}", tariff_params(options)).results.first
       end
 
       private

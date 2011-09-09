@@ -23,7 +23,7 @@ module Genability
       # @example Return the time of use group for Georgia Power Co
       #   Genability.time_of_uses(2756, 1)
       def time_of_uses(load_serving_entity_id, time_of_use_group_id)
-        get("timeofuses/#{load_serving_entity_id}/#{time_of_use_group_id}").results.first
+        get("public/timeofuses/#{load_serving_entity_id}/#{time_of_use_group_id}").results.first
       end
 
       alias :tou :time_of_uses
@@ -45,7 +45,7 @@ module Genability
       # @example Return the intervals for the time of use group for Georgia Power Co
       #   Genability.time_of_use_intervals(2756, 1)
       def time_of_use_intervals(load_serving_entity_id, time_of_use_group_id, options = {})
-        get("timeofuses/#{load_serving_entity_id}/#{time_of_use_group_id}/intervals", interval_params(options)).results
+        get("public/timeofuses/#{load_serving_entity_id}/#{time_of_use_group_id}/intervals", interval_params(options)).results
       end
 
       alias :tou_intervals :time_of_use_intervals

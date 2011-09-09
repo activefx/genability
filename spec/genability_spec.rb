@@ -6,7 +6,7 @@ describe "Genability" do
     it { Genability::Configuration::DEFAULT_ADAPTER.should == :net_http }
     it { Genability::Configuration::DEFAULT_APPLICATION_ID.should be_nil }
     it { Genability::Configuration::DEFAULT_APPLICATION_KEY.should be_nil }
-    it { Genability::Configuration::DEFAULT_ENDPOINT.should == 'http://api.genability.com/rest/public/' }
+    it { Genability::Configuration::DEFAULT_ENDPOINT.should == 'http://api.genability.com/rest/' }
     it { Genability::Configuration::DEFAULT_FORMAT.should == :json }
     it { Genability::Configuration::DEFAULT_USER_AGENT.should == 'Genability API Ruby Gem' }
     it { Genability::Configuration::DEFAULT_PROXY.should be_nil }

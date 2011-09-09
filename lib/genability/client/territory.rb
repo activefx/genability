@@ -33,7 +33,7 @@ module Genability
       # @example Return territory Baseline Region V for Pacific Gas & Electric Co
       #   Genability.territory(3539)
       def territory(territory_id, options = {})
-        get("territories/#{territory_id}", territory_params(options)).results.first
+        get("public/territories/#{territory_id}", territory_params(options)).results.first
       end
 
       # Returns a list of territories.
@@ -52,7 +52,7 @@ module Genability
       # @example Return a list of territories for Pacific Gas & Electric Co
       #   Genability.territories(:lse_id => 734)
       def territories(options = {})
-        get("territories", territories_params(options)).results
+        get("public/territories", territories_params(options)).results
       end
 
       private

@@ -31,7 +31,7 @@ module Genability
       def prices(tariff_id, *args)
         options = args.last.is_a?(Hash) ? args.pop : {}
         from_date_time = args.first || Time.now
-        get("prices/#{tariff_id}", prices_params(from_date_time, options)).results
+        get("public/prices/#{tariff_id}", prices_params(from_date_time, options)).results
       end
 
       private
