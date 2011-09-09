@@ -30,13 +30,11 @@ module Genability
       #   Genability.load_serving_entities(:page => 2)
       # @example Return only 10 load serving entities
       #   Genability.load_serving_entities(:per_page => 10)
-      # @example Search for load serving entities with the name 'Infinite'
-      #   Genability.load_serving_entities(:search => 'Infinite')
       # @example Search for load serving entities starting with the letters 'Ka'
       #   Genability.load_serving_entities(:starts_with => 'Ka')
       # @example Search for load serving entities ending with the word 'Inc'
       #   Genability.load_serving_entities(:ends_with => 'Inc')
-      # @example Search for load serving entities with the word 'Energy' somewhere in the name
+      # @example Search for load serving entities with the word 'Energy'
       #   Genability.load_serving_entities(:contains => 'Energy')
       def load_serving_entities(options={})
         get("lses", lses_params(options)).results

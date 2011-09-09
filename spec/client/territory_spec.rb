@@ -28,7 +28,9 @@ describe Genability::Client do
         use_vcr_cassette "territory"
 
         it "should return a territory" do
-          @client.territory(3539).lse_id.should == 734
+          territory = @client.territory(3539)
+          territory.should be_a Hashie::Mash
+          territory.lse_id.should == 734
         end
 
       end

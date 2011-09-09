@@ -20,7 +20,7 @@ module Genability
         "true"
       end
 
-      def multi_option_handler(value)
+      def multi_option_handler(value = nil)
         return nil if value.nil?
         if value.is_a?(Array)
           value.collect{|x| x.upcase}.join(',')

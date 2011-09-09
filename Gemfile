@@ -13,6 +13,7 @@ group :development do
   gem "jeweler", "~> 1.6.2"
   gem "simplecov", "~> 0.4"
   gem "vcr", "~> 1.10.0"
-  gem "webmock", "~> 1.6.0"
+  gem "webmock", "~> 1.7.0"
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 

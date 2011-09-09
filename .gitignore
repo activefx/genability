@@ -1,3 +1,6 @@
+# Built gem
+*.gem
+
 # API Keys for regenerating API requests
 spec/configuration.yml
 

@@ -36,36 +36,40 @@ def configuration_defaults
   CONFIGURATION_DEFAULTS
 end
 
+def genability_request_path(path)
+  Genability.endpoint + path
+end
+
 def a_delete(path)
-  a_request(:delete, Genability.endpoint + path)
+  a_request(:delete, genability_request_path(path))
 end
 
 def a_get(path)
-  a_request(:get, Genability.endpoint + path)
+  a_request(:get, genability_request_path(path))
 end
 
 def a_post(path)
-  a_request(:post, Genability.endpoint + path)
+  a_request(:post, genability_request_path(path))
 end
 
 def a_put(path)
-  a_request(:put, Genability.endpoint + path)
+  a_request(:put, genability_request_path(path))
 end
 
 def stub_delete(path)
-  stub_request(:delete, Genability.endpoint + path)
+  stub_request(:delete, genability_request_path(path))
 end
 
 def stub_get(path)
-  stub_request(:get, Genability.endpoint + path)
+  stub_request(:get, genability_request_path(path))
 end
 
 def stub_post(path)
-  stub_request(:post, Genability.endpoint + path)
+  stub_request(:post, genability_request_path(path))
 end
 
 def stub_put(path)
-  stub_request(:put, Genability.endpoint + path)
+  stub_request(:put, genability_request_path(path))
 end
 
 def fixture_path

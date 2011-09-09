@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Matthew Solt}]
-  s.date = %q{2011-07-01}
+  s.date = %q{2011-09-08}
   s.description = %q{Ruby client for the Genability power pricing and related APIs - learn more at https://developer.genability.com}
   s.email = %q{mattsolt@gmail.com}
   s.extra_rdoc_files = [
@@ -90,7 +90,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.2"])
       s.add_development_dependency(%q<simplecov>, ["~> 0.4"])
       s.add_development_dependency(%q<vcr>, ["~> 1.10.0"])
-      s.add_development_dependency(%q<webmock>, ["~> 1.6.0"])
+      s.add_development_dependency(%q<webmock>, ["~> 1.7.0"])
+      s.add_development_dependency(%q<ruby-debug19>, [">= 0"])
     else
       s.add_dependency(%q<faraday>, ["~> 0.6"])
       s.add_dependency(%q<faraday_middleware>, ["~> 0.6"])
@@ -103,7 +104,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jeweler>, ["~> 1.6.2"])
       s.add_dependency(%q<simplecov>, ["~> 0.4"])
       s.add_dependency(%q<vcr>, ["~> 1.10.0"])
-      s.add_dependency(%q<webmock>, ["~> 1.6.0"])
+      s.add_dependency(%q<webmock>, ["~> 1.7.0"])
+      s.add_dependency(%q<ruby-debug19>, [">= 0"])
     end
   else
     s.add_dependency(%q<faraday>, ["~> 0.6"])
@@ -117,7 +119,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jeweler>, ["~> 1.6.2"])
     s.add_dependency(%q<simplecov>, ["~> 0.4"])
     s.add_dependency(%q<vcr>, ["~> 1.10.0"])
-    s.add_dependency(%q<webmock>, ["~> 1.6.0"])
+    s.add_dependency(%q<webmock>, ["~> 1.7.0"])
+    s.add_dependency(%q<ruby-debug19>, [">= 0"])
   end
 end
 

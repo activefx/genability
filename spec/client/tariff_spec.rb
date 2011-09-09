@@ -40,7 +40,9 @@ describe Genability::Client do
         use_vcr_cassette "tariff"
 
         it "should return a tariff" do
-          @client.tariff(512).tariff_id.should == 512
+          tariff = @client.tariff(512)
+          tariff.should be_a Hashie::Mash
+          tariff.tariff_id.should == 512
         end
 
       end
