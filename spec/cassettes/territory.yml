@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Fri, 01 Jul 2011 18:52:54 GMT
-    body: "{\"status\":\"success\",\"count\":1,\"type\":\"Territory\",\"results\":[{\"territoryId\":3539,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region V\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null}]}"
+      - Fri, 09 Sep 2011 23:12:21 GMT
+    body: "{\"status\":\"success\",\"count\":1,\"type\":\"Territory\",\"results\":[{\"territoryId\":3539,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region V\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false}]}"
     http_version: "1.1"
