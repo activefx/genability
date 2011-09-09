@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Fri, 01 Jul 2011 18:52:52 GMT
-    body: "{\"status\":\"success\",\"count\":1,\"type\":\"Tariff\",\"results\":[{\"tariffId\":512,\"masterTariffId\":512,\"priorTariffId\":null,\"lseId\":2756,\"lseName\":\"Georgia Power Co\",\"distributionLseId\":null,\"tariffCode\":\"R-17\",\"tariffName\":\"Residential Service\",\"tariffType\":\"DEFAULT\",\"customerClass\":\"RESIDENTIAL\",\"territoryId\":3114,\"effectiveDate\":\"2011-03-01\",\"endDate\":null,\"isActive\":true,\"billingPeriod\":\"MONTHLY\",\"properties\":null,\"rates\":null,\"timeZone\":\"US/Eastern\",\"goldData\":false}]}"
+      - Fri, 09 Sep 2011 23:09:23 GMT
+    body: "{\"status\":\"success\",\"count\":1,\"type\":\"Tariff\",\"results\":[{\"tariffId\":512,\"masterTariffId\":512,\"priorTariffId\":null,\"lseId\":2756,\"lseName\":\"Georgia Power Co\",\"distributionLseId\":null,\"tariffCode\":\"R-17\",\"tariffName\":\"Residential Service\",\"tariffType\":\"DEFAULT\",\"customerClass\":\"RESIDENTIAL\",\"territoryId\":3114,\"effectiveDate\":\"2011-03-01\",\"endDate\":null,\"isActive\":true,\"billingPeriod\":\"MONTHLY\",\"properties\":null,\"timeZone\":\"US/Eastern\",\"currency\":\"USD\",\"rates\":null}]}"
     http_version: "1.1"
