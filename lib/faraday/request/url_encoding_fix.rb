@@ -13,7 +13,6 @@ module Faraday
       @app.call(env)
     end
 
-
   end
 end
 

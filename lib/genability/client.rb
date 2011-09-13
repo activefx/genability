@@ -2,6 +2,7 @@ module Genability
   # Wrapper for the Genability REST API
   class Client < API
     require 'genability/client/helpers'
+    require 'genability/client/calculate'
     require 'genability/client/load_serving_entity'
     require 'genability/client/price'
     require 'genability/client/season'
@@ -12,6 +13,7 @@ module Genability
 
     include Genability::Client::Helpers
 
+    include Genability::Client::Calculate
     include Genability::Client::LoadServingEntity
     include Genability::Client::Price
     include Genability::Client::Season

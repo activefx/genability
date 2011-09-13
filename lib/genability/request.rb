@@ -30,8 +30,11 @@ module Genability
         case method
         when :get, :delete
           request.url(path, options)
+          request.params['appId'] = application_id
+          request.params['appKey'] = application_key
         when :post, :put
           request.path = path
+          request.headers['Content-Type'] = 'application/json'
           request.body = options unless options.empty?
         end
       end
