@@ -42,6 +42,7 @@ describe Genability::Client do
             }
           )
           calc.tariff_name.should == "Residential Service"
+          calc.items.first.rate_name.should == "Basic Service Charge"
         end
 
         it "should not allow invalid tariff inputs" do
