@@ -31,20 +31,9 @@ module Genability
         get("alpha/calculate/#{tariff_id}", calculate_meta_params(from, to, options)).results
       end
 
-
-#  fromDateTimeDateStarting date and time for this Calculate request. (Required)
-#  toDateTimeDateEnd date and time for this Calculate request. (Required)
-#  territoryIdLongThe territory ID of where the usage consumption occurred. (Required for most CA tariffs. Read more)
-#  detailLevelStringToggles the level of details for the calculation result. (Optional) Possible values are:
-#  ALL - return all details for this calculation (default)
-#  TOTAL - return only the overall total, without any details
-#  CHARGE_TYPE - group the details by charge types, such as FIXED, CONSUMPTION, QUANTITY
-#  RATE - group the details by rates. This is most similar to how a utility bill is constructed.
-#  inputsArray of TariffInputThe input values to use when running the calculation.
-
-
-
+      # Calculate the cost of electricity for a given rate/pricing plan.
       # @overload calculate(tariff_id, from_date_time, to_date_time, tariff_inputs, options = {})
+      # @see https://developer.genability.com/documentation/api-reference/pricing/calculate
       def calculate(tariff_id, from, to, tariff_inputs, options = {})
         post(
           "alpha/calculate/#{tariff_id}",

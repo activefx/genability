@@ -1,0 +1,30 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/echo/validatedate.json?appId=ValidAppID&appKey=ValidAppKey&dateToValidate=2011-09-12T18:16:26.3-0700
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: Not Found
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      set-cookie: 
+      - JSESSIONID=FBE9E40E9B1EC1C6933E186510F8EAB2; Path=/rest
+      content-type: 
+      - text/html;charset=ISO-8859-1
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 13 Sep 2011 01:13:34 GMT
+    body: "404"
+    http_version: "1.1"

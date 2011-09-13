@@ -3,8 +3,10 @@ module Genability
   class Client < API
     require 'genability/client/helpers'
     require 'genability/client/calculate'
+    require 'genability/client/echo'
     require 'genability/client/load_serving_entity'
     require 'genability/client/price'
+    require 'genability/client/property'
     require 'genability/client/season'
     require 'genability/client/tariff'
     require 'genability/client/territory'
@@ -14,8 +16,10 @@ module Genability
     include Genability::Client::Helpers
 
     include Genability::Client::Calculate
+    include Genability::Client::Echo
     include Genability::Client::LoadServingEntity
     include Genability::Client::Price
+    include Genability::Client::Property
     include Genability::Client::Season
     include Genability::Client::Tariff
     include Genability::Client::Territory

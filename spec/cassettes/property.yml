@@ -1,0 +1,28 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.genability.com:80/rest/public/properties/connectionType.json?appId=ValidAppID&appKey=ValidAppKey
+    body: 
+    headers: 
+      accept: 
+      - application/json; charset=utf-8
+      user-agent: 
+      - Genability API Ruby Gem
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache-Coyote/1.1
+      content-type: 
+      - application/json;charset=utf-8
+      transfer-encoding: 
+      - chunked
+      date: 
+      - Tue, 13 Sep 2011 00:58:02 GMT
+    body: "{\"status\":\"success\",\"count\":1,\"type\":\"PropertyKey\",\"results\":[{\"keyName\":\"connectionType\",\"displayName\":\"Connection Type\",\"family\":\"service\",\"keyspace\":\"electricity\",\"description\":\"Where/how the service is connected to the grid (e.g. primary, transmission, subtransmission).\",\"dataType\":\"CHOICE\",\"choices\":[{\"value\":\"Secondary Connection\",\"displayValue\":\"Secondary Connection\"},{\"value\":\"Primary Connection\",\"displayValue\":\"Primary Connection\"},{\"value\":\"Subtransmission Connection\",\"displayValue\":\"Subtransmission Connection\"},{\"value\":\"Transmission Connection\",\"displayValue\":\"Transmission Connection\"}],\"formulaDetail\":null,\"entityType\":null,\"entityId\":null}]}"
+    http_version: "1.1"

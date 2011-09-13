@@ -9,6 +9,7 @@ describe Genability::Client do
       before(:all) do
         @options = {:format => format}.merge(configuration_defaults)
         @client = Genability::Client.new(@options)
+        @time = Time.now
       end
 
       # ISO 8601 date format with a syntax of:
@@ -18,8 +19,10 @@ describe Genability::Client do
       # are the milliseconds and the Z is the GMT time zone offset.
       context ".format_to_iso8601" do
 
+        use_vcr_cassette "echo"
+
         it "should format dates to ISO 8601" do
-          @client.send(:format_to_iso8601, Time.now).
+          @client.send(:format_to_iso8601, @time).
             should =~ /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{1,3}-\d{4}/
         end
 
