@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Wed, 26 Oct 2011 04:23:42 GMT
+      - Wed, 26 Oct 2011 06:45:05 GMT
     body: "{\"status\":\"success\",\"count\":1,\"type\":\"Zipcode\",\"results\":[{\"state\":\"MI\",\"timeZone\":5,\"zipcode\":\"48322\",\"latitude\":42.542943,\"longitude\":-83.379712,\"city\":\"WEST BLOOMFIELD\",\"county\":\"OAKLAND\",\"areaCode\":\"248/734\",\"cityType\":\"B\",\"cityAliasAbbreviation\":\"W BLOOMFIELD\",\"elevation\":943,\"dayLightSaving\":true,\"classificationCode\":null,\"cityMixedCase\":\"West Bloomfield\",\"cityAliasMixedCase\":\"West Bloomfield\",\"stateAnsi\":26,\"countyAnsi\":125}]}"
     http_version: "1.1"

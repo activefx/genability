@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Wed, 26 Oct 2011 04:23:32 GMT
+      - Wed, 26 Oct 2011 06:44:56 GMT
     body: "{\"status\":\"success\",\"count\":1,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":2756,\"name\":\"Georgia Power Co\",\"code\":\"7140\",\"websiteHome\":\"http://www.georgiapower.com/\"}]}"
     http_version: "1.1"

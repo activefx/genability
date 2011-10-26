@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Matthew Solt}]
-  s.date = %q{2011-09-08}
+  s.date = %q{2011-10-26}
   s.description = %q{Ruby client for the Genability power pricing and related APIs - learn more at https://developer.genability.com}
   s.email = %q{mattsolt@gmail.com}
   s.extra_rdoc_files = [
@@ -33,9 +33,12 @@ Gem::Specification.new do |s|
     "lib/genability.rb",
     "lib/genability/api.rb",
     "lib/genability/client.rb",
+    "lib/genability/client/calculate.rb",
+    "lib/genability/client/echo.rb",
     "lib/genability/client/helpers.rb",
     "lib/genability/client/load_serving_entity.rb",
     "lib/genability/client/price.rb",
+    "lib/genability/client/property.rb",
     "lib/genability/client/season.rb",
     "lib/genability/client/tariff.rb",
     "lib/genability/client/territory.rb",
@@ -46,9 +49,12 @@ Gem::Specification.new do |s|
     "lib/genability/error.rb",
     "lib/genability/request.rb",
     "lib/mashie_extensions.rb",
+    "spec/cassettes/calculate.yml",
     "spec/cassettes/load_serving_entities.yml",
     "spec/cassettes/load_serving_entity.yml",
     "spec/cassettes/prices.yml",
+    "spec/cassettes/properties.yml",
+    "spec/cassettes/property.yml",
     "spec/cassettes/seasons.yml",
     "spec/cassettes/tariff.yml",
     "spec/cassettes/tariffs.yml",
@@ -57,8 +63,11 @@ Gem::Specification.new do |s|
     "spec/cassettes/time_of_use.yml",
     "spec/cassettes/time_of_uses.yml",
     "spec/cassettes/zipcode.yml",
+    "spec/client/calculate_spec.rb",
+    "spec/client/helpers_spec.rb",
     "spec/client/load_serving_entity_spec.rb",
     "spec/client/price_spec.rb",
+    "spec/client/property_spec.rb",
     "spec/client/season_spec.rb",
     "spec/client/tariff_spec.rb",
     "spec/client/territory_spec.rb",
@@ -79,47 +88,47 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<faraday>, ["~> 0.6"])
-      s.add_runtime_dependency(%q<faraday_middleware>, ["~> 0.6"])
-      s.add_runtime_dependency(%q<hashie>, ["~> 1.0.0"])
-      s.add_runtime_dependency(%q<multi_json>, ["~> 1.0.0"])
-      s.add_runtime_dependency(%q<chronic>, ["~> 0.4.0"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.6.0"])
+      s.add_runtime_dependency(%q<faraday>, ["~> 0.7.4"])
+      s.add_runtime_dependency(%q<faraday_middleware>, ["~> 0.7.0"])
+      s.add_runtime_dependency(%q<hashie>, ["~> 1.2.0"])
+      s.add_runtime_dependency(%q<multi_json>, ["~> 1.0.3"])
+      s.add_runtime_dependency(%q<chronic>, ["~> 0.6.4"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.7"])
       s.add_development_dependency(%q<yard>, ["~> 0.7.0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.6.2"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.0.7"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<simplecov>, ["~> 0.4"])
-      s.add_development_dependency(%q<vcr>, ["~> 1.10.0"])
-      s.add_development_dependency(%q<webmock>, ["~> 1.7.0"])
+      s.add_development_dependency(%q<vcr>, ["~> 1.11.3"])
+      s.add_development_dependency(%q<webmock>, ["~> 1.7.4"])
       s.add_development_dependency(%q<ruby-debug19>, [">= 0"])
     else
-      s.add_dependency(%q<faraday>, ["~> 0.6"])
-      s.add_dependency(%q<faraday_middleware>, ["~> 0.6"])
-      s.add_dependency(%q<hashie>, ["~> 1.0.0"])
-      s.add_dependency(%q<multi_json>, ["~> 1.0.0"])
-      s.add_dependency(%q<chronic>, ["~> 0.4.0"])
-      s.add_dependency(%q<rspec>, ["~> 2.6.0"])
+      s.add_dependency(%q<faraday>, ["~> 0.7.4"])
+      s.add_dependency(%q<faraday_middleware>, ["~> 0.7.0"])
+      s.add_dependency(%q<hashie>, ["~> 1.2.0"])
+      s.add_dependency(%q<multi_json>, ["~> 1.0.3"])
+      s.add_dependency(%q<chronic>, ["~> 0.6.4"])
+      s.add_dependency(%q<rspec>, ["~> 2.7"])
       s.add_dependency(%q<yard>, ["~> 0.7.0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.6.2"])
+      s.add_dependency(%q<bundler>, ["~> 1.0.7"])
+      s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<simplecov>, ["~> 0.4"])
-      s.add_dependency(%q<vcr>, ["~> 1.10.0"])
-      s.add_dependency(%q<webmock>, ["~> 1.7.0"])
+      s.add_dependency(%q<vcr>, ["~> 1.11.3"])
+      s.add_dependency(%q<webmock>, ["~> 1.7.4"])
       s.add_dependency(%q<ruby-debug19>, [">= 0"])
     end
   else
-    s.add_dependency(%q<faraday>, ["~> 0.6"])
-    s.add_dependency(%q<faraday_middleware>, ["~> 0.6"])
-    s.add_dependency(%q<hashie>, ["~> 1.0.0"])
-    s.add_dependency(%q<multi_json>, ["~> 1.0.0"])
-    s.add_dependency(%q<chronic>, ["~> 0.4.0"])
-    s.add_dependency(%q<rspec>, ["~> 2.6.0"])
+    s.add_dependency(%q<faraday>, ["~> 0.7.4"])
+    s.add_dependency(%q<faraday_middleware>, ["~> 0.7.0"])
+    s.add_dependency(%q<hashie>, ["~> 1.2.0"])
+    s.add_dependency(%q<multi_json>, ["~> 1.0.3"])
+    s.add_dependency(%q<chronic>, ["~> 0.6.4"])
+    s.add_dependency(%q<rspec>, ["~> 2.7"])
     s.add_dependency(%q<yard>, ["~> 0.7.0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.6.2"])
+    s.add_dependency(%q<bundler>, ["~> 1.0.7"])
+    s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<simplecov>, ["~> 0.4"])
-    s.add_dependency(%q<vcr>, ["~> 1.10.0"])
-    s.add_dependency(%q<webmock>, ["~> 1.7.0"])
+    s.add_dependency(%q<vcr>, ["~> 1.11.3"])
+    s.add_dependency(%q<webmock>, ["~> 1.7.4"])
     s.add_dependency(%q<ruby-debug19>, [">= 0"])
   end
 end
