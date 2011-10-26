@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.genability.com:80/rest/alpha/calculate/512.json?appId=ValidAppID&appKey=ValidAppKey&fromDateTime=2011-06-16T16:00:00.0-0700&toDateTime=2011-07-31T21:00:00.0-0700
+    uri: http://api.genability.com:80/rest/beta/calculate/512?appId=ValidAppID&appKey=ValidAppKey&cityLimits=Inside&connectionType=Primary%20Connection&fromDateTime=2011-06-16T19:00:00.0-0400&toDateTime=2011-08-01T00:00:00.0-0400
     body: 
     headers: 
       accept: 
@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Sat, 10 Sep 2011 14:04:18 GMT
-    body: "{\"status\":\"success\",\"count\":2,\"type\":\"TariffInput\",\"results\":[{\"key\":\"consumption\",\"fromDateTime\":\"2011-06-16T19:00:00.000-0400\",\"toDateTime\":\"2011-07-01T00:00:00.000-0400\",\"unit\":\"kwh\",\"accuracy\":null,\"seasonId\":315},{\"key\":\"consumption\",\"fromDateTime\":\"2011-07-01T00:00:00.000-0400\",\"toDateTime\":\"2011-08-01T00:00:00.000-0400\",\"unit\":\"kwh\",\"accuracy\":null,\"seasonId\":315}]}"
+      - Wed, 26 Oct 2011 04:23:28 GMT
+    body: "{\"status\":\"success\",\"count\":4,\"type\":\"PropertyData\",\"results\":[{\"keyName\":\"consumption\",\"dataType\":\"DECIMAL\",\"fromDateTime\":\"2011-06-16T19:00:00.000-0400\",\"toDateTime\":\"2011-07-01T00:00:00.000-0400\",\"unit\":\"kwh\"},{\"keyName\":\"cityLimits\",\"dataType\":\"CHOICE\",\"fromDateTime\":\"2011-06-16T19:00:00.000-0400\",\"toDateTime\":\"2011-08-01T00:00:00.000-0400\",\"dataValue\":\"Inside\"},{\"keyName\":\"connectionType\",\"dataType\":\"CHOICE\",\"fromDateTime\":\"2011-06-16T19:00:00.000-0400\",\"toDateTime\":\"2011-08-01T00:00:00.000-0400\",\"dataValue\":\"Primary Connection\"},{\"keyName\":\"consumption\",\"dataType\":\"DECIMAL\",\"fromDateTime\":\"2011-07-01T00:00:00.000-0400\",\"toDateTime\":\"2011-08-01T00:00:00.000-0400\",\"unit\":\"kwh\"}]}"
     http_version: "1.1"

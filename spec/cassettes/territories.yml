@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.genability.com:80/rest/public/territories.json?appId=ValidAppID&appKey=ValidAppKey&lseId=734
+    uri: http://api.genability.com:80/rest/public/territories?appId=ValidAppID&appKey=ValidAppKey&lseId=734
     body: 
     headers: 
       accept: 
@@ -23,13 +23,13 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Fri, 09 Sep 2011 23:44:12 GMT
+      - Wed, 26 Oct 2011 04:23:39 GMT
     body: "{\"status\":\"success\",\"count\":11,\"type\":\"Territory\",\"results\":[{\"territoryId\":807,\"lseId\":734,\"parentTerritoryId\":null,\"territoryName\":\"Service area for CA\",\"usageType\":\"SERVICE\",\"itemTypes\":\"COUNTY\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3534,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region P\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3535,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region Q\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3536,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region R\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3537,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region S\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3538,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region T\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3539,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region V\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3540,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region W\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3541,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region X\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3542,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region Y\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false},{\"territoryId\":3543,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region Z\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false}]}"
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.genability.com:80/rest/public/territories.json?appId=ValidAppID&appKey=ValidAppKey&containsItemType=ZIPCODE&containsItemValue=94115&lseId=734&masterTariffId=522
+    uri: http://api.genability.com:80/rest/public/territories?appId=ValidAppID&appKey=ValidAppKey&containsItemType=ZIPCODE&containsItemValue=94115&lseId=734&masterTariffId=522
     body: 
     headers: 
       accept: 
@@ -50,6 +50,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Fri, 09 Sep 2011 23:44:12 GMT
+      - Wed, 26 Oct 2011 04:23:39 GMT
     body: "{\"status\":\"success\",\"count\":1,\"type\":\"Territory\",\"results\":[{\"territoryId\":3538,\"lseId\":734,\"parentTerritoryId\":807,\"territoryName\":\"Baseline Region T\",\"usageType\":\"TARIFF\",\"itemTypes\":\"ZIPCODE\",\"items\":null,\"deregRes\":false,\"deregCandi\":false}]}"
     http_version: "1.1"

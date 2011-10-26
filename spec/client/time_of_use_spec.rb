@@ -28,7 +28,7 @@ describe Genability::Client do
         use_vcr_cassette "time_of_use"
 
         it "should return the intervals for a given LSE and touGroupId" do
-          intervals = @client.time_of_use_intervals(2756, 1)
+          intervals = @client.time_of_use_intervals(734, 1)
           intervals.should be_an Array
           intervals.first.tou_group_id.should == 1
         end

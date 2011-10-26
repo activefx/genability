@@ -26,7 +26,7 @@ module Genability
     # Perform an HTTP request
     def request(method, path, options, raw=false, unformatted=false)
       response = connection(raw).send(method) do |request|
-        path = formatted_path(path) unless unformatted
+        path = formatted_path(path) unless unformatted || default_request?
         case method
         when :get, :delete
           request.url(path, options)
@@ -43,6 +43,10 @@ module Genability
 
     def formatted_path(path)
       [path, format].compact.join('.')
+    end
+
+    def default_request?
+      format == :json
     end
   end
 end

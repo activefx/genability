@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.genability.com:80/rest/public/lses/2756.json?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/public/lses/2756?appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers: 
       accept: 
@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Fri, 09 Sep 2011 22:54:47 GMT
+      - Wed, 26 Oct 2011 04:23:32 GMT
     body: "{\"status\":\"success\",\"count\":1,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":2756,\"name\":\"Georgia Power Co\",\"code\":\"7140\",\"websiteHome\":\"http://www.georgiapower.com/\"}]}"
     http_version: "1.1"

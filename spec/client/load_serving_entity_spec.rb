@@ -18,7 +18,7 @@ describe Genability::Client do
         it "should return an array of load serving entities" do
           lses = @client.load_serving_entities
           lses.should be_an Array
-          lses.first.name.should == "Planet Energy"
+          lses.first.name.should_not be_nil
         end
 
         it "should return 25 results by default" do
@@ -30,23 +30,32 @@ describe Genability::Client do
         end
 
         it "should accept a pageStart parameter" do
-          @client.load_serving_entities(:page => 2).first.name.should == "Oasis Energy"
+          lses = @client.load_serving_entities(:page => 2)
+          lses.should be_an Array
+          lses.count.should == 25
+          lses.first.name.should_not be_nil
         end
 
         it "should accept a startsWithWildCard parameter" do
-          @client.load_serving_entities(:starts_with => 'In').each do |result|
+          lses = @client.load_serving_entities(:starts_with => 'In')
+          lses.should_not be_empty
+          lses.each do |result|
             result.name.should =~ /^In/
           end
         end
 
         it "should accept an endsWithWildCard parameter" do
-          @client.load_serving_entities(:ends_with => 'Inc').each do |result|
+          lses = @client.load_serving_entities(:ends_with => 'Inc')
+          lses.should_not be_empty
+          lses.each do |result|
             result.name.should =~ /Inc$/
           end
         end
 
         it "should accept a containsWildCard parameter" do
-          @client.load_serving_entities(:search_string => 'Energy').each do |result|
+          lses = @client.load_serving_entities(:search_string => 'Energy')
+          lses.should_not be_empty
+          lses.each do |result|
             result.name.should =~ /Energy/
           end
         end

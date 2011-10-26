@@ -50,6 +50,7 @@ module Genability
 
       alias :tou_intervals :time_of_use_intervals
       alias :intervals :time_of_use_intervals
+      alias :toui :time_of_use_intervals
 
       private
 

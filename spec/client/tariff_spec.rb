@@ -21,6 +21,12 @@ describe Genability::Client do
           tariffs.first.tariff_id.should == 79
         end
 
+        # this example also demonstrates searching within results
+        it "should allow searches by lse_id" do
+          tariffs = @client.tariffs(:lse_id => 734)
+          tariffs.select{|x| x['tariffCode'] == "E-7"}.first.tariff_code.should == "E-7"
+        end
+
         it "should accept a string for customerClasses and tariffTypes parameters" do
           @client.tariffs(:customer_classes => 'residential').each do |tariff|
             tariff.customer_class.should =~ /RESIDENTIAL/

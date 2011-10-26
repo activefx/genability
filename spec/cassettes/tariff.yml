@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.genability.com:80/rest/public/tariffs/512.json?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/public/tariffs/512?appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers: 
       accept: 
@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Fri, 09 Sep 2011 23:09:23 GMT
-    body: "{\"status\":\"success\",\"count\":1,\"type\":\"Tariff\",\"results\":[{\"tariffId\":512,\"masterTariffId\":512,\"priorTariffId\":null,\"lseId\":2756,\"lseName\":\"Georgia Power Co\",\"distributionLseId\":null,\"tariffCode\":\"R-17\",\"tariffName\":\"Residential Service\",\"tariffType\":\"DEFAULT\",\"customerClass\":\"RESIDENTIAL\",\"territoryId\":3114,\"effectiveDate\":\"2011-03-01\",\"endDate\":null,\"isActive\":true,\"billingPeriod\":\"MONTHLY\",\"properties\":null,\"timeZone\":\"US/Eastern\",\"currency\":\"USD\",\"rates\":null}]}"
+      - Wed, 26 Oct 2011 04:23:39 GMT
+    body: "{\"status\":\"success\",\"count\":1,\"type\":\"Tariff\",\"results\":[{\"tariffId\":512,\"masterTariffId\":512,\"priorTariffId\":null,\"lseId\":2756,\"lseName\":\"Georgia Power Co\",\"distributionLseId\":null,\"tariffCode\":\"R-17\",\"tariffName\":\"Residential Service\",\"tariffType\":\"DEFAULT\",\"customerClass\":\"RESIDENTIAL\",\"territoryId\":3114,\"effectiveDate\":\"2011-03-01\",\"endDate\":null,\"timeZone\":\"US/Eastern\",\"isActive\":true,\"billingPeriod\":\"MONTHLY\",\"currency\":\"USD\",\"properties\":null,\"rates\":null}]}"
     http_version: "1.1"

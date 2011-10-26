@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.genability.com:80/rest/public/seasons.json?appId=ValidAppID&appKey=ValidAppKey&lseId=734
+    uri: http://api.genability.com:80/rest/public/seasons?appId=ValidAppID&appKey=ValidAppKey&lseId=734
     body: 
     headers: 
       accept: 
@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Fri, 09 Sep 2011 23:17:19 GMT
+      - Wed, 26 Oct 2011 04:23:35 GMT
     body: "{\"status\":\"success\",\"count\":1,\"type\":\"SeasonGroup\",\"results\":[{\"lseId\":null,\"seasons\":[{\"seasonId\":280,\"lseId\":734,\"seasonGroupId\":1,\"seasonName\":\"Summer\",\"seasonFromMonth\":5,\"seasonFromDay\":1,\"seasonToMonth\":10,\"seasonToDay\":31},{\"seasonId\":281,\"lseId\":734,\"seasonGroupId\":1,\"seasonName\":\"Winter\",\"seasonFromMonth\":11,\"seasonFromDay\":1,\"seasonToMonth\":4,\"seasonToDay\":30}],\"seasonGroupId\":1}]}"
     http_version: "1.1"

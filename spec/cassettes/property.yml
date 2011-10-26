@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.genability.com:80/rest/public/properties/connectionType.json?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/public/properties/connectionType?appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers: 
       accept: 
@@ -23,6 +23,6 @@
       transfer-encoding: 
       - chunked
       date: 
-      - Tue, 13 Sep 2011 00:58:02 GMT
-    body: "{\"status\":\"success\",\"count\":1,\"type\":\"PropertyKey\",\"results\":[{\"keyName\":\"connectionType\",\"displayName\":\"Connection Type\",\"family\":\"service\",\"keyspace\":\"electricity\",\"description\":\"Where/how the service is connected to the grid (e.g. primary, transmission, subtransmission).\",\"dataType\":\"CHOICE\",\"choices\":[{\"value\":\"Secondary Connection\",\"displayValue\":\"Secondary Connection\"},{\"value\":\"Primary Connection\",\"displayValue\":\"Primary Connection\"},{\"value\":\"Subtransmission Connection\",\"displayValue\":\"Subtransmission Connection\"},{\"value\":\"Transmission Connection\",\"displayValue\":\"Transmission Connection\"}],\"formulaDetail\":null,\"entityType\":null,\"entityId\":null}]}"
+      - Wed, 26 Oct 2011 04:23:34 GMT
+    body: "{\"status\":\"success\",\"count\":1,\"type\":\"PropertyKey\",\"results\":[{\"keyName\":\"connectionType\",\"displayName\":\"Connection Type\",\"family\":\"service\",\"keyspace\":\"electricity\",\"description\":\"Where/how the service is connected to the grid (e.g. primary, transmission, subtransmission).\",\"dataType\":\"CHOICE\",\"choices\":[{\"value\":\"Secondary Connection\",\"displayValue\":\"Secondary Connection\"},{\"value\":\"Primary Connection\",\"displayValue\":\"Primary Connection\"},{\"value\":\"Subtransmission Connection\",\"displayValue\":\"Subtransmission Connection\"},{\"value\":\"Transmission Connection\",\"displayValue\":\"Transmission Connection\"},{\"value\":\"High Voltage\",\"displayValue\":\"High Voltage\"}]}]}"
     http_version: "1.1"

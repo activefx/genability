@@ -28,17 +28,16 @@ module Genability
       # @rate_limited true
       # @see https://developer.genability.com/documentation/api-reference/pricing/calculate
       def calculate_metadata(tariff_id, from, to, options = {})
-        get("alpha/calculate/#{tariff_id}", calculate_meta_params(from, to, options)).results
+        get("beta/calculate/#{tariff_id}", calculate_meta_params(from, to, options)).results
       end
 
       # Calculate the cost of electricity for a given rate/pricing plan.
       # @overload calculate(tariff_id, from_date_time, to_date_time, tariff_inputs, options = {})
       # @see https://developer.genability.com/documentation/api-reference/pricing/calculate
       def calculate(tariff_id, from, to, tariff_inputs, options = {})
-        post(
-          "alpha/calculate/#{tariff_id}",
-          calculate_params(from, to, tariff_inputs, options)
-        ).results.first
+        post( "beta/calculate/#{tariff_id}",
+              calculate_params(from, to, tariff_inputs, options)
+            ).results.first
       end
 
       private
@@ -49,22 +48,26 @@ module Genability
           "toDateTime" => format_to_iso8601(to),
           "territoryId" => options[:territory_id],
           "detailLevel" => options[:detail_level],
+          #"connectionType" => options[:connection_type],
           "tariffInputs" => tariff_input_params(tariff_inputs)
         }.
         delete_if{ |k,v| v.nil? }.
-        merge({ "appId" => Genability.application_id,
-                "appKey" => Genability.application_key }).
+        merge({ "appId" => application_id,
+                "appKey" => application_key }).
         to_json
       end
 
       def tariff_input_params(tariff_inputs)
         [].tap do |a|
-          if tariff_inputs.is_a?(Hash)
+          case tariff_inputs.class
+          when Hash
             a << convert_tariff_input_params(tariff_inputs)
-          elsif tariff_inputs.is_a?(Array)
+          when Array
             tariff_inputs.each do |ti|
               a << convert_tariff_input_params(tariff_inputs)
             end
+          when Hashie::Mash
+            a << tariff_inputs.to_hash
           else
             raise Genability::InvalidTariffInput
           end
@@ -74,11 +77,11 @@ module Genability
       def convert_tariff_input_params(tariff_input)
         raise Genability::InvalidTariffInput unless tariff_input.is_a?(Hash)
         {
-          "key" => tariff_input[:input_key],
+          "keyName" => tariff_input[:key_name],
           "fromDateTime" => tariff_input[:from],
           "toDateTime" => tariff_input[:to],
-          "unit" => tariff_input[:unit],
-          "value" => tariff_input[:input_value]
+          "unit" => tariff_input[:unit]
+          #"value" => tariff_input[:input_value]
         }
       end
 
@@ -86,7 +89,9 @@ module Genability
         {
           "fromDateTime" => format_to_iso8601(from),
           "toDateTime" => format_to_iso8601(to),
-          "territoryId" => options[:territory_id]
+          "territoryId" => options[:territory_id],
+          "connectionType" => options[:connection_type],
+          "cityLimits" => options[:city_limits]
         }.delete_if{ |k,v| v.nil? }
       end
 

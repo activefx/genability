@@ -2,35 +2,8 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
-    uri: http://api.genability.com:80/rest/alpha/calculate/9.json?appId=ValidAppID&appKey=ValidAppKey
-    body: fromDateTime=2011-08-01T00%3A00%3A00.0-0700&toDateTime=2011-09-01T00%3A00%3A00.0-0700
-    headers: 
-      accept: 
-      - application/json; charset=utf-8
-      user-agent: 
-      - Genability API Ruby Gem
-      content-type: 
-      - application/x-www-form-urlencoded
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 415
-      message: Unsupported Media Type
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
-      - text/html;charset=utf-8
-      content-length: 
-      - "1051"
-      date: 
-      - Mon, 12 Sep 2011 19:32:05 GMT
-    body: "<html><head><title>Apache Tomcat/5.5.31 - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 415 - </h1><HR size=\"1\" noshade=\"noshade\"><p><b>type</b> Status report</p><p><b>message</b> <u></u></p><p><b>description</b> <u>The server refused this request because the request entity is in a format not supported by the requested resource for the requested method ().</u></p><HR size=\"1\" noshade=\"noshade\"><h3>Apache Tomcat/5.5.31</h3></body></html>"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :post
-    uri: http://api.genability.com:80/rest/alpha/calculate/512.json
-    body: "{\"appId\":\"ValidAppID\",\"appKey\":\"ValidAppKey\",\"fromDateTime\":\"2011-08-01T00:00:00.000-0700\",\"toDateTime\":\"2011-09-01T00:00:00.000-0700\",\"tariffInputs\":[{\"key\":\"consumption\",\"fromDateTime\":\"2011-08-01T00:00:00.000-0700\",\"toDateTime\":\"2011-09-01T00:00:00.000-0700\",\"unit\":\"kWh\",\"value\":220}]}"
+    uri: http://api.genability.com:80/rest/beta/calculate/512
+    body: "{\"fromDateTime\":\"2011-09-01T00:00:00.0-0400\",\"toDateTime\":\"2011-09-10T00:00:00.0-0400\",\"tariffInputs\":[{\"keyName\":\"consumption\",\"fromDateTime\":\"2011-08-01T00:00:00.000-0700\",\"toDateTime\":\"2011-09-01T00:00:00.000-0700\",\"unit\":\"kWh\"}],\"appId\":\"ValidAppID\",\"appKey\":\"ValidAppKey\"}"
     headers: 
       accept: 
       - application/json; charset=utf-8
@@ -40,16 +13,18 @@
       - application/json
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers: 
       server: 
       - Apache-Coyote/1.1
+      x-error-detail: 
+      - Gee some error
       content-type: 
       - application/json;charset=utf-8
       transfer-encoding: 
       - chunked
       date: 
-      - Mon, 12 Sep 2011 23:01:50 GMT
-    body: "{\"status\":\"success\",\"count\":1,\"type\":\"CalculatedCost\",\"results\":[{\"masterTariffId\":512,\"tariffName\":\"Residential Service\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T03:00:00.000-0400\",\"totalCost\":36.400201061065110048,\"items\":[{\"tariffRateId\":2734,\"tariffRateBandId\":3258,\"rateGroupName\":\"Basic Service Charge\",\"rateName\":\"Basic Service Charge\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T00:00:00.000-0400\",\"rateType\":\"COST_PER_UNIT\",\"quantityKey\":\"fixed\",\"itemQuantity\":1.000000,\"itemCount\":1,\"cost\":9.000000},{\"tariffRateId\":2736,\"tariffRateBandId\":3262,\"rateGroupName\":\"Energy Charges\",\"rateName\":\"Summer Energy Charges\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T00:00:00.000-0400\",\"rateType\":\"COST_PER_UNIT\",\"quantityKey\":\"consumption\",\"itemQuantity\":219.112903,\"itemCount\":1,\"cost\":11.094343617599},{\"tariffRateId\":2737,\"tariffRateBandId\":3265,\"rateGroupName\":\"Minimum Monthly Bill\",\"rateName\":\"Minimum Charge\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T00:00:00.000-0400\",\"rateType\":\"COST_PER_UNIT\",\"quantityKey\":\"minimum\",\"itemQuantity\":1.000000,\"itemCount\":1,\"cost\":0},{\"tariffRateId\":2723,\"tariffRateBandId\":3247,\"rateGroupName\":\"Demand Side Management Residential Schedule\",\"rateName\":\"Demand Side Management Residential Schedule\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T00:00:00.000-0400\",\"rateType\":\"PERCENTAGE\",\"quantityKey\":\"fixed\",\"itemQuantity\":1.000000,\"itemCount\":1,\"cost\":0.491923204322044872},{\"tariffRateId\":2724,\"tariffRateBandId\":3248,\"rateGroupName\":\"Environmental Compliance Cost Recovery Schedule\",\"rateName\":\"Environmental Compliance Cost Recovery Schedule\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T00:00:00.000-0400\",\"rateType\":\"PERCENTAGE\",\"quantityKey\":\"fixed\",\"itemQuantity\":1.000000,\"itemCount\":1,\"cost\":3.026901147420308184},{\"tariffRateId\":2725,\"tariffRateBandId\":3249,\"rateGroupName\":\"Fuel Cost Recovery Schedule\",\"rateName\":\"Summer\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T00:00:00.000-0400\",\"rateType\":\"COST_PER_UNIT\",\"quantityKey\":\"consumption\",\"itemQuantity\":219.112903,\"itemCount\":1,\"cost\":10.135067328265},{\"tariffRateId\":2731,\"tariffRateBandId\":3255,\"rateGroupName\":\"Municipal Franchise Fee Schedule\",\"rateName\":\"Municipal Franchise Fee Schedule\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T00:00:00.000-0400\",\"rateType\":\"PERCENTAGE\",\"quantityKey\":\"fixed\",\"itemQuantity\":1.000000,\"itemCount\":1,\"cost\":0.879947923223155176},{\"tariffRateId\":2733,\"tariffRateBandId\":3257,\"rateGroupName\":\"Nuclear Construction Cost Recovery Schedule\",\"rateName\":\"Nuclear Construction Cost Recovery Schedule\",\"fromDateTime\":\"2011-08-01T03:00:00.000-0400\",\"toDateTime\":\"2011-09-01T00:00:00.000-0400\",\"rateType\":\"PERCENTAGE\",\"quantityKey\":\"fixed\",\"itemQuantity\":1.000000,\"itemCount\":1,\"cost\":1.772017840235601816}]}]}"
+      - Wed, 26 Oct 2011 04:23:29 GMT
+    body: "{\"status\":\"error\",\"count\":1,\"type\":\"Error\",\"results\":[{\"code\":\"NotNull\",\"message\":\"Please provide valid connection type\",\"objectName\":\"getInputsRequest\",\"propertyName\":\"connectionType\"}]}"
     http_version: "1.1"
