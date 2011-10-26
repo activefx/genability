@@ -9,23 +9,23 @@ describe Genability::Client do
       before(:all) do
         @options = {:format => format}.merge(configuration_defaults)
         @client = Genability::Client.new(@options)
+        @master_tariff_id = 512
+        @from = "Monday, September 1st, 2011"
+        @to = "Monday, September 10th, 2011"
+        @metadata_options = {
+                              :connection_type => "Primary Connection",
+                              :city_limits => "Inside"
+                            }
       end
 
       context ".calculate_metadata" do
 
-        use_vcr_cassette "calculate_metadata"
+        use_vcr_cassette "calculate"
 
         it "should return the inputs required to use the calculate method" do
           metadata = @client.calculate_metadata(
-                       512,                           # masterTariffId
-                       "2011-06-16T19:00:00.0-0400",  # toDateTime
-                       "2011-08-01T00:00:00.0-0400",  # fromDateTime
-                       {
-                         :connection_type => "Primary Connection",
-                         :city_limits => "Inside"
-                       }
+                       @master_tariff_id, @from, @to, @metadata_options
                      ).first
-          debugger
           metadata.unit.should == "kwh"
         end
 
@@ -34,39 +34,19 @@ describe Genability::Client do
       context ".calculate" do
 
         use_vcr_cassette "calculate"
-#"results\":[{
-#\"keyName\":\"consumption\",\"dataType\":\"DECIMAL\",
-#\"fromDateTime\":\"2011-06-16T19:00:00.000-0400\",
-#\"toDateTime\":\"2011-07-01T00:00:00.000-0400\",
-#\"unit\":\"kwh\"},
-#{\"keyName\":\"cityLimits\",#\"dataType\":\"CHOICE\",
-#\"fromDateTime\":\"2011-06-16T19:00:00.000-0400\",
-#\"toDateTime\":\"2011-08-01T00:00:00.000-0400\",
-##\"dataValue\":\"Inside\"},
-#{\"keyName\":\"connectionType\",\"dataType\":\"CHOICE\",
-#\"fromDateTime\":\"2011-06-16T19:00:00.000-0400\",
-##\"toDateTime\":\"2011-08-01T00:00:00.000-0400\",
-#\"dataValue\":\"Primary Connection\"},
-#{\"keyName\":\"consumption\",
-##\"dataType\":\"DECIMAL\",
-#\"fromDateTime\":\"2011-07-01T00:00:00.000-0400\",
-#\"toDateTime\":\"2011-08-01T00:00:00.000-0400\",
-#\"unit\":\"kwh\"}]}"
+
         it "should calculate the total cost" do
+          # First, get the Calculate Input metadata
+          metadata = @client.calculate_metadata(
+                       @master_tariff_id, @from, @to, @metadata_options
+                     ).first
+          # Then run the calculation with the input metadata
+          debugger
           calc = @client.calculate(
-            512,                                         # masterTariffId
-            "Monday, September 1st, 2011",               # fromDateTime
-            "Monday, September 10th, 2011",              # toDateTime
-            {                                            # tariffInputs
-              :key_name => "consumption",
-              :from => "2011-08-01T00:00:00.000-0700",
-              :to => "2011-09-01T00:00:00.000-0700",
-              :unit => "kWh"#,
-              #:input_value => 220
-            }#,
-            #{                                            # optional parameters
-            #  :connection_type => "Primary Connection"
-            #}
+            @master_tariff_id,
+            @from,
+            @to,
+            metadata
           )
           calc.tariff_name.should == "Residential Service"
           calc.items.first.rate_name.should == "Basic Service Charge"

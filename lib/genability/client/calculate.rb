@@ -59,15 +59,15 @@ module Genability
 
       def tariff_input_params(tariff_inputs)
         [].tap do |a|
-          case tariff_inputs.class
+          case tariff_inputs
+          when Hashie::Mash
+            a << tariff_inputs.to_hash
           when Hash
             a << convert_tariff_input_params(tariff_inputs)
           when Array
             tariff_inputs.each do |ti|
               a << convert_tariff_input_params(tariff_inputs)
             end
-          when Hashie::Mash
-            a << tariff_inputs.to_hash
           else
             raise Genability::InvalidTariffInput
           end
