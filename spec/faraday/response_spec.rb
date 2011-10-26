@@ -15,8 +15,8 @@ describe Faraday::Response do
   }.each do |status, exception|
     context "when HTTP status is #{status}" do
 
-      before do
-        stub_get('public/lses.json?appId=ValidAppID&appKey=ValidAppKey').
+      before(:each) do
+        stub_get('public/lses?appId=ValidAppID&appKey=ValidAppKey').
           to_return(:status => status)
       end
 
