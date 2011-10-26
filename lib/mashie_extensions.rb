@@ -3,10 +3,19 @@ require 'hashie/mash'
 # @private
 class Hashie::Mash
 
+  # Convert results to Ruby / Rails friendly attributes
+  def to_friendly_hash
+    out = {}
+    keys.each do |k|
+      out[genability_to_ruby_friendly(k)] = Hashie::Hash === self[k] ? self[k].to_hash : self[k]
+    end
+    out
+  end
+
   # Modified Hashie::Mash method missing
   def method_missing(method_name, *args, &blk)
     begin
-      method_name = genability_method_name_converter(method_name)
+      method_name = ruby_to_genability_friendly(method_name)
     rescue; end
     return self.[](method_name, &blk) if key?(method_name)
     match = method_name.to_s.match(/(.*?)([?=!]?)$/)
@@ -22,10 +31,12 @@ class Hashie::Mash
     end
   end
 
-  # Convert camelcase methods begining with a lowercase letter
-  # into underscored methods
-  def genability_method_name_converter(method_name)
+  def ruby_to_genability_friendly(method_name)
     method_name.to_s.gsub(/(?:^|_)(.)/){ $1.upcase }.gsub(/^[A-Z]/){ $&.downcase }.to_sym
+  end
+
+  def genability_to_ruby_friendly(method_name)
+    method_name.to_s.gsub(/^[A-Z]/){ $&.downcase }.gsub(/[A-Z]/){ "_#{$&.downcase}" }.to_sym
   end
 
 end

@@ -48,7 +48,6 @@ module Genability
           "toDateTime" => format_to_iso8601(to),
           "territoryId" => options[:territory_id],
           "detailLevel" => options[:detail_level],
-          #"connectionType" => options[:connection_type],
           "tariffInputs" => tariff_input_params(tariff_inputs)
         }.
         delete_if{ |k,v| v.nil? }.
@@ -60,13 +59,11 @@ module Genability
       def tariff_input_params(tariff_inputs)
         [].tap do |a|
           case tariff_inputs
-          when Hashie::Mash
-            a << tariff_inputs.to_hash
           when Hash
             a << convert_tariff_input_params(tariff_inputs)
           when Array
             tariff_inputs.each do |ti|
-              a << convert_tariff_input_params(tariff_inputs)
+              a << convert_tariff_input_params(ti)
             end
           else
             raise Genability::InvalidTariffInput
@@ -75,13 +72,12 @@ module Genability
       end
 
       def convert_tariff_input_params(tariff_input)
-        raise Genability::InvalidTariffInput unless tariff_input.is_a?(Hash)
+        return tariff_input.to_hash if tariff_input.is_a? Hashie::Mash
         {
           "keyName" => tariff_input[:key_name],
           "fromDateTime" => tariff_input[:from],
           "toDateTime" => tariff_input[:to],
           "unit" => tariff_input[:unit]
-          #"value" => tariff_input[:input_value]
         }
       end
 

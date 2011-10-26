@@ -39,15 +39,11 @@ describe Genability::Client do
           # First, get the Calculate Input metadata
           metadata = @client.calculate_metadata(
                        @master_tariff_id, @from, @to, @metadata_options
-                     ).first
+                     )
           # Then run the calculation with the input metadata
-          debugger
           calc = @client.calculate(
-            @master_tariff_id,
-            @from,
-            @to,
-            metadata
-          )
+                   @master_tariff_id, @from, @to, metadata
+                 )
           calc.tariff_name.should == "Residential Service"
           calc.items.first.rate_name.should == "Basic Service Charge"
         end
