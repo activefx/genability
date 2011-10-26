@@ -87,7 +87,7 @@ Usage Examples
     result = Genability.calculate(
                512,                                           # Master Tariff ID
                "Monday, September 1st, 2011",                 # From DateTime
-               Monday, September 10th, 2011",                 # To DateTime
+               "Monday, September 10th, 2011",                 # To DateTime
                metadata                                       # Metadata from previous call
              )
     # result.total_cost # => 10.837
