@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{genability}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Matthew Solt}]
@@ -50,6 +50,7 @@ Gem::Specification.new do |s|
     "lib/genability/request.rb",
     "lib/mashie_extensions.rb",
     "spec/cassettes/calculate.yml",
+    "spec/cassettes/echo.yml",
     "spec/cassettes/load_serving_entities.yml",
     "spec/cassettes/load_serving_entity.yml",
     "spec/cassettes/prices.yml",
@@ -64,6 +65,7 @@ Gem::Specification.new do |s|
     "spec/cassettes/time_of_uses.yml",
     "spec/cassettes/zipcode.yml",
     "spec/client/calculate_spec.rb",
+    "spec/client/echo_spec.rb",
     "spec/client/helpers_spec.rb",
     "spec/client/load_serving_entity_spec.rb",
     "spec/client/price_spec.rb",

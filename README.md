@@ -19,10 +19,22 @@ Usage Examples
     client = Genability::Client.new(:application_id = 'ValidAppId', :application_key => 'ValidAppKey')
 
     # Or use the block configuration method
+    # Useful for using in a Rails initializer
     # register an app at https://developer.genability.com
     Genability.configure do |config|
-      config.application_id = 'ValidAppId'
-      config.application_key = 'ValidAppKey'
+      config.application_id   = 'ValidAppId'
+      config.application_key  = 'ValidAppKey'
+    end
+
+    # Advanced Configuration Options
+    Genability.configure do |config|
+      config.application_id   = 'ValidAppId'
+      config.application_key  = 'ValidAppKey'
+      config.adapter          = :typhoeus
+      config.endpoint         = "http://api.genability.com/rest/"
+      config.format           = :json
+      config.user_agent       = "Genability API Ruby Gem"
+      config.proxy            = "http://127.0.0.1"
     end
 
     # Get a list of load serving entities
@@ -53,10 +65,33 @@ Usage Examples
     Genability.time_of_uses(2756, 1)
 
     # Get the intervals for the particular time of use group of a given load serving entity
-    Genability.time_of_use_intervals(2756, 1)
+    Genability.time_of_use_intervals(734, 1)
 
     # Get information about a zipcode
     Genability.zipcode('48322')
+
+    # Calculate the cost of electricity for a given rate plan
+    #
+    # First, get the caculation metadata necessary to run the calculation
+    metadata = Genability.calculate_metadata(
+                 512                                          # Master Tariff ID
+                 "Monday, September 1st, 2011"                # From DateTime
+                 "Monday, September 10th, 2011"               # To DateTime
+                 {                                            # Metadata Options
+                   :connection_type => "Primary Connection",
+                   :city_limits => "Inside"
+                 }
+               )
+
+    # Then, run the calculation with the metadata you just received
+    result = Genability.calculate(
+               512,                                           # Master Tariff ID
+               "Monday, September 1st, 2011",                 # From DateTime
+               Monday, September 10th, 2011",                 # To DateTime
+               metadata                                       # Metadata from previous call
+             )
+    # result.total_cost # => 10.837
+
 
     # Please see the documentation for available options and the tests for additional examples
 

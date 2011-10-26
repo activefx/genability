@@ -46,7 +46,7 @@ module Genability
     end
 
     def default_request?
-      format == :json
+      format.to_sym == :json
     end
   end
 end
