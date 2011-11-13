@@ -59,7 +59,7 @@ module Genability
       def tariffs_params(options)
         {
           'lseId' => options[:lse_id],
-          'effectiveOn' => options[:effective_on],
+          'effectiveOn' => format_to_iso8601(options[:effective_on]),
           'customerClasses' => multi_option_handler(options[:customer_classes]),
           'tariffTypes' => multi_option_handler(options[:tariff_types]),
           'zipCode' => options[:zip_code]
