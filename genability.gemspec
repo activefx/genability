@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{genability}
-  s.version = "0.2.0"
+  s.name = "genability"
+  s.version = "0.3.0.alpha"
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = [%q{Matthew Solt}]
-  s.date = %q{2011-10-26}
-  s.description = %q{Ruby client for the Genability power pricing and related APIs - learn more at https://developer.genability.com}
-  s.email = %q{mattsolt@gmail.com}
+  s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
+  s.authors = ["Matthew Solt"]
+  s.date = "2011-11-27"
+  s.description = "Ruby client for the Genability power pricing and related APIs - learn more at https://developer.genability.com"
+  s.email = "mattsolt@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.md",
     "README.md"
@@ -80,11 +80,11 @@ Gem::Specification.new do |s|
     "spec/genability_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/activefx/genability}
-  s.licenses = [%q{MIT}]
-  s.require_paths = [%q{lib}]
-  s.rubygems_version = %q{1.8.5}
-  s.summary = %q{Ruby client for the Genability API}
+  s.homepage = "http://github.com/activefx/genability"
+  s.licenses = ["MIT"]
+  s.require_paths = ["lib"]
+  s.rubygems_version = "1.8.11"
+  s.summary = "Ruby client for the Genability API"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
