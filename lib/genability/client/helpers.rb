@@ -12,7 +12,18 @@ module Genability
       def pagination_params(options)
         {
           'pageStart' => options['pageStart'] || options[:page_start] || options[:page],
-          'pageCount' => options['pageCount'] || options[:page_count] || options[:per_page],
+          'pageCount' => options['pageCount'] || options[:page_count] || options[:per_page]
+        }.delete_if{ |k,v| v.nil? }
+      end
+
+      def search_params(options)
+        {
+          'search'      => options[:search],
+          'searchOn'    => options[:search_on],
+          'startsWith'  => convert_to_boolean(options[:starts_with]),
+          'endsWith'    => convert_to_boolean(options[:ends_with]),
+          'isRegex'     => options[:sort_on],
+          'sortOrder'   => options[:sort_order]
         }.delete_if{ |k,v| v.nil? }
       end
 

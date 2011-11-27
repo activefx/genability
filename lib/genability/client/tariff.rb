@@ -65,12 +65,14 @@ module Genability
           'zipCode' => options[:zip_code]
         }.delete_if{ |k,v| v.nil? }.
           merge( tariff_params(options) ).
+          merge( search_params(options) ).
           merge( pagination_params(options) )
       end
 
       def tariff_params(options)
         {
-          'populateRates' => convert_to_boolean(options[:populate_rates])
+          'populateRates' => convert_to_boolean(options[:populate_rates]),
+          'populateProperties' => convert_to_boolean(options[:populate_properties])
         }.delete_if{ |k,v| v.nil? }
       end
 
