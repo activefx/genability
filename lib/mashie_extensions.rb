@@ -7,7 +7,15 @@ class Hashie::Mash
   def to_friendly_hash
     out = {}
     keys.each do |k|
-      out[genability_to_ruby_friendly(k)] = Hashie::Hash === self[k] ? self[k].to_hash : self[k]
+      out[genability_to_ruby_friendly(k)] = case self[k]
+      when Hashie::Hash
+        self[k].to_friendly_hash
+      when Array
+        self[k].collect(&:to_friendly_hash)
+      else
+        self[k]
+      end
+      #Hashie::Hash === self[k] ? self[k].to_friendly_hash : self[k]
     end
     out
   end
