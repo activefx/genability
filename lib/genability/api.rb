@@ -1,6 +1,3 @@
-require 'genability/configuration'
-require 'genability/connection'
-require 'genability/request'
 #require File.expand_path('../oauth', __FILE__)
 
 module Genability

@@ -1,8 +1,10 @@
-require 'genability/api'
-require 'genability/client'
-require 'genability/configuration'
-require 'genability/error'
 require 'mashie_extensions'
+require 'genability/configuration'
+require 'genability/connection'
+require 'genability/request'
+require 'genability/api'
+require 'genability/error'
+require 'genability/client'
 
 module Genability
   extend Configuration

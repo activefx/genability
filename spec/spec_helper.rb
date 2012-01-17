@@ -21,6 +21,9 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 RSpec.configure do |config|
   config.include WebMock::API
   config.extend VCR::RSpec::Macros
+  config.before(:each) do
+    Genability.reset
+  end
 end
 
 VCR.config do |c|
