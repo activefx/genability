@@ -21,14 +21,14 @@ describe Genability::Client do
 
       end
 
-      #  context ".validate_date" do
+      context ".validate" do
 
-      #    it "should validate a properly formatted date" do
-      #      date = @client.send(:format_to_iso8601, "October 26th, 2011")
-      #      @client.validate_date(date).should == "hi"
-      #    end
+        it "should validate a properly formatted date" do
+          date = @client.send(:format_to_iso8601, "October 26th, 2011")
+          @client.validate('dateTime', date).date_time.should == "2011-10-26T12:00:00.000-04:00"
+        end
 
-      #  end
+      end
 
       context ".raise_error" do
 

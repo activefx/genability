@@ -1,163 +1,328 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:35 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:44:53 GMT
-    body: "{\"status\":\"success\",\"count\":3169,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null},{\"lseId\":15,\"name\":\"KBR Rural Public Power District\",\"code\":\"10065\",\"websiteHome\":null},{\"lseId\":16,\"name\":\"K C Electric Association\",\"code\":\"10066\",\"websiteHome\":null},{\"lseId\":17,\"name\":\"Kauai Island Utility Cooperative\",\"code\":\"10071\",\"websiteHome\":null},{\"lseId\":18,\"name\":\"Kansas State University\",\"code\":\"10081\",\"websiteHome\":null},{\"lseId\":19,\"name\":\"Keewatin Public Utilities\",\"code\":\"10089\",\"websiteHome\":null},{\"lseId\":20,\"name\":\"Austin City of\",\"code\":\"1009\",\"websiteHome\":null},{\"lseId\":21,\"name\":\"Kennebunk Light & Power Dist\",\"code\":\"10144\",\"websiteHome\":null},{\"lseId\":22,\"name\":\"Austin Energy\",\"code\":\"1015\",\"websiteHome\":null},{\"lseId\":23,\"name\":\"City of Kennett\",\"code\":\"10152\",\"websiteHome\":null},{\"lseId\":24,\"name\":\"KEM Electric Coop Inc\",\"code\":\"10153\",\"websiteHome\":null},{\"lseId\":25,\"name\":\"Kiamichi Electric Coop, Inc\",\"code\":\"10170\",\"websiteHome\":null},{\"lseId\":26,\"name\":\"Kentucky Utilities Co\",\"code\":\"10171\",\"websiteHome\":\"http://www.lge-ku.com/\"}]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":3169,"type":"LoadServingEntity","results":[{"lseId":2,"name":"Kansas
+      City Power & Light Co","code":"10000","websiteHome":"http://www.kcpl.com/index.html"},{"lseId":3,"name":"Kansas
+      Gas & Electric Co","code":"10005","websiteHome":null},{"lseId":4,"name":"Karnes
+      Electric Coop Inc","code":"10009","websiteHome":null},{"lseId":5,"name":"Kay
+      Electric Coop","code":"10012","websiteHome":null},{"lseId":6,"name":"Kaw Valley
+      Electric Coop Inc","code":"10019","websiteHome":null},{"lseId":7,"name":"City
+      of Aurelia","code":"1002","websiteHome":null},{"lseId":8,"name":"City of Kaplan","code":"10025","websiteHome":null},{"lseId":9,"name":"City
+      of Kasota","code":"10037","websiteHome":null},{"lseId":10,"name":"City of Aurora","code":"1004","websiteHome":null},{"lseId":11,"name":"City
+      of Kasson","code":"10040","websiteHome":null},{"lseId":12,"name":"City of Kaukauna","code":"10056","websiteHome":null},{"lseId":13,"name":"City
+      of Lamar","code":"10057","websiteHome":null},{"lseId":14,"name":"Kaysville City
+      Corporation","code":"10063","websiteHome":null},{"lseId":15,"name":"KBR Rural
+      Public Power District","code":"10065","websiteHome":null},{"lseId":16,"name":"K
+      C Electric Association","code":"10066","websiteHome":null},{"lseId":17,"name":"Kauai
+      Island Utility Cooperative","code":"10071","websiteHome":null},{"lseId":18,"name":"Kansas
+      State University","code":"10081","websiteHome":null},{"lseId":19,"name":"Keewatin
+      Public Utilities","code":"10089","websiteHome":null},{"lseId":20,"name":"Austin
+      City of","code":"1009","websiteHome":null},{"lseId":21,"name":"Kennebunk Light
+      & Power Dist","code":"10144","websiteHome":null},{"lseId":22,"name":"Austin
+      Energy","code":"1015","websiteHome":null},{"lseId":23,"name":"City of Kennett","code":"10152","websiteHome":null},{"lseId":24,"name":"KEM
+      Electric Coop Inc","code":"10153","websiteHome":null},{"lseId":25,"name":"Kiamichi
+      Electric Coop, Inc","code":"10170","websiteHome":null},{"lseId":26,"name":"Kentucky
+      Utilities Co","code":"10171","websiteHome":"http://www.lge-ku.com/"}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&pageCount=10
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:24 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:44:53 GMT
-    body: "{\"status\":\"success\",\"count\":3169,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":2,\"name\":\"Kansas City Power & Light Co\",\"code\":\"10000\",\"websiteHome\":\"http://www.kcpl.com/index.html\"},{\"lseId\":3,\"name\":\"Kansas Gas & Electric Co\",\"code\":\"10005\",\"websiteHome\":null},{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null}]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":3169,"type":"LoadServingEntity","results":[{"lseId":2,"name":"Kansas
+      City Power & Light Co","code":"10000","websiteHome":"http://www.kcpl.com/index.html"},{"lseId":3,"name":"Kansas
+      Gas & Electric Co","code":"10005","websiteHome":null},{"lseId":4,"name":"Karnes
+      Electric Coop Inc","code":"10009","websiteHome":null},{"lseId":5,"name":"Kay
+      Electric Coop","code":"10012","websiteHome":null},{"lseId":6,"name":"Kaw Valley
+      Electric Coop Inc","code":"10019","websiteHome":null},{"lseId":7,"name":"City
+      of Aurelia","code":"1002","websiteHome":null},{"lseId":8,"name":"City of Kaplan","code":"10025","websiteHome":null},{"lseId":9,"name":"City
+      of Kasota","code":"10037","websiteHome":null},{"lseId":10,"name":"City of Aurora","code":"1004","websiteHome":null},{"lseId":11,"name":"City
+      of Kasson","code":"10040","websiteHome":null}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&pageStart=2
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:36 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:44:53 GMT
-    body: "{\"status\":\"success\",\"count\":3169,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":5,\"name\":\"Kay Electric Coop\",\"code\":\"10012\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":7,\"name\":\"City of Aurelia\",\"code\":\"1002\",\"websiteHome\":null},{\"lseId\":8,\"name\":\"City of Kaplan\",\"code\":\"10025\",\"websiteHome\":null},{\"lseId\":9,\"name\":\"City of Kasota\",\"code\":\"10037\",\"websiteHome\":null},{\"lseId\":10,\"name\":\"City of Aurora\",\"code\":\"1004\",\"websiteHome\":null},{\"lseId\":11,\"name\":\"City of Kasson\",\"code\":\"10040\",\"websiteHome\":null},{\"lseId\":12,\"name\":\"City of Kaukauna\",\"code\":\"10056\",\"websiteHome\":null},{\"lseId\":13,\"name\":\"City of Lamar\",\"code\":\"10057\",\"websiteHome\":null},{\"lseId\":14,\"name\":\"Kaysville City Corporation\",\"code\":\"10063\",\"websiteHome\":null},{\"lseId\":15,\"name\":\"KBR Rural Public Power District\",\"code\":\"10065\",\"websiteHome\":null},{\"lseId\":16,\"name\":\"K C Electric Association\",\"code\":\"10066\",\"websiteHome\":null},{\"lseId\":17,\"name\":\"Kauai Island Utility Cooperative\",\"code\":\"10071\",\"websiteHome\":null},{\"lseId\":18,\"name\":\"Kansas State University\",\"code\":\"10081\",\"websiteHome\":null},{\"lseId\":19,\"name\":\"Keewatin Public Utilities\",\"code\":\"10089\",\"websiteHome\":null},{\"lseId\":20,\"name\":\"Austin City of\",\"code\":\"1009\",\"websiteHome\":null},{\"lseId\":21,\"name\":\"Kennebunk Light & Power Dist\",\"code\":\"10144\",\"websiteHome\":null},{\"lseId\":22,\"name\":\"Austin Energy\",\"code\":\"1015\",\"websiteHome\":null},{\"lseId\":23,\"name\":\"City of Kennett\",\"code\":\"10152\",\"websiteHome\":null},{\"lseId\":24,\"name\":\"KEM Electric Coop Inc\",\"code\":\"10153\",\"websiteHome\":null},{\"lseId\":25,\"name\":\"Kiamichi Electric Coop, Inc\",\"code\":\"10170\",\"websiteHome\":null},{\"lseId\":26,\"name\":\"Kentucky Utilities Co\",\"code\":\"10171\",\"websiteHome\":\"http://www.lge-ku.com/\"},{\"lseId\":27,\"name\":\"City of Marathon\",\"code\":\"10172\",\"websiteHome\":null},{\"lseId\":28,\"name\":\"Kenyon Municipal Utilities\",\"code\":\"10179\",\"websiteHome\":null}]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":3169,"type":"LoadServingEntity","results":[{"lseId":4,"name":"Karnes
+      Electric Coop Inc","code":"10009","websiteHome":null},{"lseId":5,"name":"Kay
+      Electric Coop","code":"10012","websiteHome":null},{"lseId":6,"name":"Kaw Valley
+      Electric Coop Inc","code":"10019","websiteHome":null},{"lseId":7,"name":"City
+      of Aurelia","code":"1002","websiteHome":null},{"lseId":8,"name":"City of Kaplan","code":"10025","websiteHome":null},{"lseId":9,"name":"City
+      of Kasota","code":"10037","websiteHome":null},{"lseId":10,"name":"City of Aurora","code":"1004","websiteHome":null},{"lseId":11,"name":"City
+      of Kasson","code":"10040","websiteHome":null},{"lseId":12,"name":"City of Kaukauna","code":"10056","websiteHome":null},{"lseId":13,"name":"City
+      of Lamar","code":"10057","websiteHome":null},{"lseId":14,"name":"Kaysville City
+      Corporation","code":"10063","websiteHome":null},{"lseId":15,"name":"KBR Rural
+      Public Power District","code":"10065","websiteHome":null},{"lseId":16,"name":"K
+      C Electric Association","code":"10066","websiteHome":null},{"lseId":17,"name":"Kauai
+      Island Utility Cooperative","code":"10071","websiteHome":null},{"lseId":18,"name":"Kansas
+      State University","code":"10081","websiteHome":null},{"lseId":19,"name":"Keewatin
+      Public Utilities","code":"10089","websiteHome":null},{"lseId":20,"name":"Austin
+      City of","code":"1009","websiteHome":null},{"lseId":21,"name":"Kennebunk Light
+      & Power Dist","code":"10144","websiteHome":null},{"lseId":22,"name":"Austin
+      Energy","code":"1015","websiteHome":null},{"lseId":23,"name":"City of Kennett","code":"10152","websiteHome":null},{"lseId":24,"name":"KEM
+      Electric Coop Inc","code":"10153","websiteHome":null},{"lseId":25,"name":"Kiamichi
+      Electric Coop, Inc","code":"10170","websiteHome":null},{"lseId":26,"name":"Kentucky
+      Utilities Co","code":"10171","websiteHome":"http://www.lge-ku.com/"},{"lseId":27,"name":"City
+      of Marathon","code":"10172","websiteHome":null},{"lseId":28,"name":"Kenyon Municipal
+      Utilities","code":"10179","websiteHome":null}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&searchString=In&startsWith=true
+    uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&search=In&startsWith=true
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:25 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:44:55 GMT
-    body: "{\"status\":\"success\",\"count\":17,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":3053,\"name\":\"Independence City of\",\"code\":\"9231\",\"websiteHome\":\"http://www.ci.independence.mo.us/\"},{\"lseId\":2356,\"name\":\"Independence Power Marketing\",\"code\":\"49921\",\"websiteHome\":null},{\"lseId\":3054,\"name\":\"Indian Electric Coop, Inc\",\"code\":\"9246\",\"websiteHome\":null},{\"lseId\":3061,\"name\":\"Indiana Michigan Power Co\",\"code\":\"9324\",\"websiteHome\":\"https://www.indianamichiganpower.com/Default.aspx\"},{\"lseId\":3056,\"name\":\"Indianapolis Power & Light Co\",\"code\":\"9273\",\"websiteHome\":\"http://www.iplpower.com/ipl/index?page=IPLHome\"},{\"lseId\":3058,\"name\":\"Indianola Municipal Utilities\",\"code\":\"9275\",\"websiteHome\":null},{\"lseId\":3155,\"name\":\"Infinite Energy Inc\",\"code\":\"\",\"websiteHome\":null},{\"lseId\":2968,\"name\":\"Inland Power & Light Company\",\"code\":\"8699\",\"websiteHome\":null},{\"lseId\":1445,\"name\":\"Inside Passage Elec Coop, Inc\",\"code\":\"18963\",\"websiteHome\":null},{\"lseId\":1793,\"name\":\"Integrys Energy Services of N.Y., Inc.\",\"code\":\"21258\",\"websiteHome\":\"http://www.integrysenergy.com/\"},{\"lseId\":2435,\"name\":\"Integrys Energy Services of Texas, LP\",\"code\":\"54892\",\"websiteHome\":null},{\"lseId\":1807,\"name\":\"Integrys Energy Services, Inc.\",\"code\":\"21795\",\"websiteHome\":\"http://www.integrysenergy.com/\"},{\"lseId\":3059,\"name\":\"Inter County Energy Coop Corp\",\"code\":\"9292\",\"websiteHome\":null},{\"lseId\":3062,\"name\":\"Intercounty Electric Coop Assn\",\"code\":\"9331\",\"websiteHome\":null},{\"lseId\":3063,\"name\":\"Intermountain Rural Elec Assn\",\"code\":\"9336\",\"websiteHome\":null},{\"lseId\":3064,\"name\":\"International Paper Co-GT Mill\",\"code\":\"9390\",\"websiteHome\":\"http://www.intermountain-rea.com/\"},{\"lseId\":3066,\"name\":\"Interstate Power and Light Co\",\"code\":\"9417\",\"websiteHome\":\"http://www.alliantenergy.com/index.htm\"}]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":17,"type":"LoadServingEntity","results":[{"lseId":3053,"name":"Independence
+      City of","code":"9231","websiteHome":"http://www.ci.independence.mo.us/"},{"lseId":2356,"name":"Independence
+      Power Marketing","code":"49921","websiteHome":null},{"lseId":3054,"name":"Indian
+      Electric Coop, Inc","code":"9246","websiteHome":null},{"lseId":3061,"name":"Indiana
+      Michigan Power Co","code":"9324","websiteHome":"https://www.indianamichiganpower.com/Default.aspx"},{"lseId":3056,"name":"Indianapolis
+      Power & Light Co","code":"9273","websiteHome":"http://www.iplpower.com/ipl/index?page=IPLHome"},{"lseId":3058,"name":"Indianola
+      Municipal Utilities","code":"9275","websiteHome":null},{"lseId":3155,"name":"Infinite
+      Energy Inc","code":"","websiteHome":null},{"lseId":2968,"name":"Inland Power
+      & Light Company","code":"8699","websiteHome":null},{"lseId":1445,"name":"Inside
+      Passage Elec Coop, Inc","code":"18963","websiteHome":null},{"lseId":1793,"name":"Integrys
+      Energy Services of N.Y., Inc.","code":"21258","websiteHome":"http://www.integrysenergy.com/"},{"lseId":2435,"name":"Integrys
+      Energy Services of Texas, LP","code":"54892","websiteHome":null},{"lseId":1807,"name":"Integrys
+      Energy Services, Inc.","code":"21795","websiteHome":"http://www.integrysenergy.com/"},{"lseId":3059,"name":"Inter
+      County Energy Coop Corp","code":"9292","websiteHome":null},{"lseId":3062,"name":"Intercounty
+      Electric Coop Assn","code":"9331","websiteHome":null},{"lseId":3063,"name":"Intermountain
+      Rural Elec Assn","code":"9336","websiteHome":null},{"lseId":3064,"name":"International
+      Paper Co-GT Mill","code":"9390","websiteHome":"http://www.intermountain-rea.com/"},{"lseId":3066,"name":"Interstate
+      Power and Light Co","code":"9417","websiteHome":"http://www.alliantenergy.com/index.htm"}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&endsWith=true&searchString=Inc
+    uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&endsWith=true&search=Inc
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:37 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:44:55 GMT
-    body: "{\"status\":\"success\",\"count\":480,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":4,\"name\":\"Karnes Electric Coop Inc\",\"code\":\"10009\",\"websiteHome\":null},{\"lseId\":6,\"name\":\"Kaw Valley Electric Coop Inc\",\"code\":\"10019\",\"websiteHome\":null},{\"lseId\":24,\"name\":\"KEM Electric Coop Inc\",\"code\":\"10153\",\"websiteHome\":null},{\"lseId\":25,\"name\":\"Kiamichi Electric Coop, Inc\",\"code\":\"10170\",\"websiteHome\":null},{\"lseId\":38,\"name\":\"KeySpan Energy Services Inc\",\"code\":\"10304\",\"websiteHome\":null},{\"lseId\":43,\"name\":\"Kingsbury Electric Coop, Inc\",\"code\":\"10329\",\"websiteHome\":null},{\"lseId\":52,\"name\":\"Kiwash Electric Coop, Inc\",\"code\":\"10375\",\"websiteHome\":null},{\"lseId\":54,\"name\":\"Kit Carson Electric Coop, Inc\",\"code\":\"10378\",\"websiteHome\":null},{\"lseId\":58,\"name\":\"Kodiak Electric Assn Inc\",\"code\":\"10433\",\"websiteHome\":null},{\"lseId\":61,\"name\":\"Kotzebue Electric Assn Inc\",\"code\":\"10451\",\"websiteHome\":null},{\"lseId\":62,\"name\":\"Kootenai Electric Coop Inc\",\"code\":\"10454\",\"websiteHome\":null},{\"lseId\":74,\"name\":\"La Plata Electric Assn, Inc\",\"code\":\"10539\",\"websiteHome\":\"http://www.lpea.com/\"},{\"lseId\":77,\"name\":\"LaCreek Electric Assn, Inc\",\"code\":\"10558\",\"websiteHome\":null},{\"lseId\":89,\"name\":\"Lake Region Electric Coop, Inc\",\"code\":\"10599\",\"websiteHome\":null},{\"lseId\":90,\"name\":\"Laclede Electric Coop, Inc\",\"code\":\"10603\",\"websiteHome\":null},{\"lseId\":95,\"name\":\"Lake Placid Village, Inc\",\"code\":\"10610\",\"websiteHome\":null},{\"lseId\":99,\"name\":\"BARC Electric Coop Inc\",\"code\":\"1062\",\"websiteHome\":null},{\"lseId\":104,\"name\":\"Lamb County Electric Coop, Inc\",\"code\":\"10625\",\"websiteHome\":null},{\"lseId\":108,\"name\":\"Lake Region Electric Assn, Inc\",\"code\":\"10632\",\"websiteHome\":null},{\"lseId\":113,\"name\":\"Licking Rural Electric Inc\",\"code\":\"10668\",\"websiteHome\":null},{\"lseId\":115,\"name\":\"Lane Electric Coop Inc\",\"code\":\"10681\",\"websiteHome\":null},{\"lseId\":125,\"name\":\"Lane-Scott Electric Coop, Inc\",\"code\":\"10728\",\"websiteHome\":null},{\"lseId\":129,\"name\":\"Laurens Electric Coop, Inc\",\"code\":\"10768\",\"websiteHome\":\"http://www.laurenselectric.com/\"},{\"lseId\":140,\"name\":\"Leavenworth-Jefferson E C, Inc\",\"code\":\"10801\",\"websiteHome\":null},{\"lseId\":142,\"name\":\"Lea County Electric Coop, Inc\",\"code\":\"10817\",\"websiteHome\":null}]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":480,"type":"LoadServingEntity","results":[{"lseId":4,"name":"Karnes
+      Electric Coop Inc","code":"10009","websiteHome":null},{"lseId":6,"name":"Kaw
+      Valley Electric Coop Inc","code":"10019","websiteHome":null},{"lseId":24,"name":"KEM
+      Electric Coop Inc","code":"10153","websiteHome":null},{"lseId":25,"name":"Kiamichi
+      Electric Coop, Inc","code":"10170","websiteHome":null},{"lseId":38,"name":"KeySpan
+      Energy Services Inc","code":"10304","websiteHome":null},{"lseId":43,"name":"Kingsbury
+      Electric Coop, Inc","code":"10329","websiteHome":null},{"lseId":52,"name":"Kiwash
+      Electric Coop, Inc","code":"10375","websiteHome":null},{"lseId":54,"name":"Kit
+      Carson Electric Coop, Inc","code":"10378","websiteHome":null},{"lseId":58,"name":"Kodiak
+      Electric Assn Inc","code":"10433","websiteHome":null},{"lseId":61,"name":"Kotzebue
+      Electric Assn Inc","code":"10451","websiteHome":null},{"lseId":62,"name":"Kootenai
+      Electric Coop Inc","code":"10454","websiteHome":null},{"lseId":74,"name":"La
+      Plata Electric Assn, Inc","code":"10539","websiteHome":"http://www.lpea.com/"},{"lseId":77,"name":"LaCreek
+      Electric Assn, Inc","code":"10558","websiteHome":null},{"lseId":89,"name":"Lake
+      Region Electric Coop, Inc","code":"10599","websiteHome":null},{"lseId":90,"name":"Laclede
+      Electric Coop, Inc","code":"10603","websiteHome":null},{"lseId":95,"name":"Lake
+      Placid Village, Inc","code":"10610","websiteHome":null},{"lseId":99,"name":"BARC
+      Electric Coop Inc","code":"1062","websiteHome":null},{"lseId":104,"name":"Lamb
+      County Electric Coop, Inc","code":"10625","websiteHome":null},{"lseId":108,"name":"Lake
+      Region Electric Assn, Inc","code":"10632","websiteHome":null},{"lseId":113,"name":"Licking
+      Rural Electric Inc","code":"10668","websiteHome":null},{"lseId":115,"name":"Lane
+      Electric Coop Inc","code":"10681","websiteHome":null},{"lseId":125,"name":"Lane-Scott
+      Electric Coop, Inc","code":"10728","websiteHome":null},{"lseId":129,"name":"Laurens
+      Electric Coop, Inc","code":"10768","websiteHome":"http://www.laurenselectric.com/"},{"lseId":140,"name":"Leavenworth-Jefferson
+      E C, Inc","code":"10801","websiteHome":null},{"lseId":142,"name":"Lea County
+      Electric Coop, Inc","code":"10817","websiteHome":null}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&searchString=Energy
+    uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&search=Energy
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:27 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:44:55 GMT
-    body: "{\"status\":\"success\",\"count\":162,\"type\":\"LoadServingEntity\",\"results\":[{\"lseId\":22,\"name\":\"Austin Energy\",\"code\":\"1015\",\"websiteHome\":null},{\"lseId\":38,\"name\":\"KeySpan Energy Services Inc\",\"code\":\"10304\",\"websiteHome\":null},{\"lseId\":103,\"name\":\"Southern Rivers Energy\",\"code\":\"10624\",\"websiteHome\":null},{\"lseId\":222,\"name\":\"Lower Valley Energy Inc\",\"code\":\"11273\",\"websiteHome\":null},{\"lseId\":228,\"name\":\"Agway Energy Services, LLC\",\"code\":\"113\",\"websiteHome\":null},{\"lseId\":304,\"name\":\"Consumers Energy\",\"code\":\"11788\",\"websiteHome\":null},{\"lseId\":362,\"name\":\"MidAmerican Energy Co\",\"code\":\"12341\",\"websiteHome\":\"http://www.midamericanenergy.com/\"},{\"lseId\":364,\"name\":\"Midwest Energy Cooperative\",\"code\":\"12377\",\"websiteHome\":null},{\"lseId\":389,\"name\":\"Midwest Energy Inc\",\"code\":\"12524\",\"websiteHome\":\"http://www.mwenergy.com\"},{\"lseId\":406,\"name\":\"Xcel Energy\",\"code\":\"12647\",\"websiteHome\":null},{\"lseId\":498,\"name\":\"CPL Retail Energy, LP\",\"code\":\"13151\",\"websiteHome\":null},{\"lseId\":499,\"name\":\"WTU Energy, LP\",\"code\":\"13153\",\"websiteHome\":null},{\"lseId\":506,\"name\":\"Xcel Energy\",\"code\":\"13211\",\"websiteHome\":null},{\"lseId\":524,\"name\":\"Constellation NewEnergy, Inc\",\"code\":\"13374\",\"websiteHome\":null},{\"lseId\":634,\"name\":\"NorthWestern Energy\",\"code\":\"13809\",\"websiteHome\":\"http://www.northwesternenergy.com/default.aspx\"},{\"lseId\":689,\"name\":\"OLS Energy-Camarillo\",\"code\":\"14149\",\"websiteHome\":null},{\"lseId\":722,\"name\":\"OLS Energy-Chino\",\"code\":\"14265\",\"websiteHome\":null},{\"lseId\":745,\"name\":\"PEPCO Energy Services\",\"code\":\"14405\",\"websiteHome\":\"http://www.pepco.com/\"},{\"lseId\":800,\"name\":\"Pennsylvania Power Co - FirstEnergy\",\"code\":\"14716\",\"websiteHome\":\"https://www.firstenergycorp.com/Penn_Power/index.html\"},{\"lseId\":819,\"name\":\"PECO Energy Co\",\"code\":\"14940\",\"websiteHome\":\"http://www.peco.com/\"},{\"lseId\":878,\"name\":\"Prairie Energy Coop\",\"code\":\"15291\",\"websiteHome\":null},{\"lseId\":892,\"name\":\"Portside Energy Corp\",\"code\":\"15343\",\"websiteHome\":null},{\"lseId\":913,\"name\":\"Xcel Energy - Colorado\",\"code\":\"15466\",\"websiteHome\":\"http://www.xcelenergy.com/\"},{\"lseId\":914,\"name\":\"Duke Energy Indiana Inc\",\"code\":\"15470\",\"websiteHome\":\"http://www.duke-energy.com/indiana.asp\"},{\"lseId\":921,\"name\":\"Puget Sound Energy Inc\",\"code\":\"15500\",\"websiteHome\":\"http://www.pse.com/Pages/default.aspx\"}]}"
-    http_version: "1.1"
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":162,"type":"LoadServingEntity","results":[{"lseId":22,"name":"Austin
+      Energy","code":"1015","websiteHome":null},{"lseId":38,"name":"KeySpan Energy
+      Services Inc","code":"10304","websiteHome":null},{"lseId":103,"name":"Southern
+      Rivers Energy","code":"10624","websiteHome":null},{"lseId":222,"name":"Lower
+      Valley Energy Inc","code":"11273","websiteHome":null},{"lseId":228,"name":"Agway
+      Energy Services, LLC","code":"113","websiteHome":null},{"lseId":304,"name":"Consumers
+      Energy","code":"11788","websiteHome":null},{"lseId":362,"name":"MidAmerican
+      Energy Co","code":"12341","websiteHome":"http://www.midamericanenergy.com/"},{"lseId":364,"name":"Midwest
+      Energy Cooperative","code":"12377","websiteHome":null},{"lseId":389,"name":"Midwest
+      Energy Inc","code":"12524","websiteHome":"http://www.mwenergy.com"},{"lseId":406,"name":"Xcel
+      Energy - Minnesota","code":"12647","websiteHome":null},{"lseId":498,"name":"CPL
+      Retail Energy, LP","code":"13151","websiteHome":null},{"lseId":499,"name":"WTU
+      Energy, LP","code":"13153","websiteHome":null},{"lseId":506,"name":"Xcel Energy","code":"13211","websiteHome":null},{"lseId":524,"name":"Constellation
+      NewEnergy, Inc","code":"13374","websiteHome":null},{"lseId":634,"name":"NorthWestern
+      Energy","code":"13809","websiteHome":"http://www.northwesternenergy.com/default.aspx"},{"lseId":689,"name":"OLS
+      Energy-Camarillo","code":"14149","websiteHome":null},{"lseId":722,"name":"OLS
+      Energy-Chino","code":"14265","websiteHome":null},{"lseId":745,"name":"PEPCO
+      Energy Services","code":"14405","websiteHome":"http://www.pepco.com/"},{"lseId":800,"name":"Pennsylvania
+      Power Co - FirstEnergy","code":"14716","websiteHome":"https://www.firstenergycorp.com/Penn_Power/index.html"},{"lseId":819,"name":"PECO
+      Energy Co","code":"14940","websiteHome":"http://www.peco.com/"},{"lseId":878,"name":"Prairie
+      Energy Coop","code":"15291","websiteHome":null},{"lseId":892,"name":"Portside
+      Energy Corp","code":"15343","websiteHome":null},{"lseId":913,"name":"Xcel Energy
+      - Colorado","code":"15466","websiteHome":"http://www.xcelenergy.com/"},{"lseId":914,"name":"Duke
+      Energy Indiana Inc","code":"15470","websiteHome":"http://www.duke-energy.com/indiana.asp"},{"lseId":921,"name":"Puget
+      Sound Energy Inc","code":"15500","websiteHome":"http://www.pse.com/Pages/default.aspx"}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.genability.com:80/rest/public/lses?appId=ValidAppID&appKey=ValidAppKey&isRegex=true&search=ansa
+    body: 
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 17 Jan 2012 10:31:38 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      content-length:
+      - '801'
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":8,"type":"LoadServingEntity","results":[{"lseId":2,"name":"Kansas
+      City Power & Light Co","code":"10000","websiteHome":"http://www.kcpl.com/index.html"},{"lseId":3,"name":"Kansas
+      Gas & Electric Co","code":"10005","websiteHome":null},{"lseId":18,"name":"Kansas
+      State University","code":"10081","websiteHome":null},{"lseId":596,"name":"North
+      Arkansas Elec Coop, Inc","code":"13676","websiteHome":null},{"lseId":1241,"name":"Southwest
+      Arkansas E C C","code":"17671","websiteHome":null},{"lseId":2894,"name":"Entergy
+      Arkansas Inc","code":"814","websiteHome":"http://www.entergy-arkansas.com/"},{"lseId":2897,"name":"Arkansas
+      Valley Elec Coop Corp","code":"817","websiteHome":"http://www.avecc.com/"},{"lseId":3139,"name":"Kansas
+      City City of","code":"9996","websiteHome":null}]}'
+    http_version: '1.1'

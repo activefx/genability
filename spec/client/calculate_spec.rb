@@ -13,8 +13,8 @@ describe Genability::Client do
         @from = "Monday, September 1st, 2011"
         @to = "Monday, September 10th, 2011"
         @metadata_options = {
-                              :connection_type => "Primary Connection",
-                              :city_limits => "Inside"
+                              "connectionType" => "Primary Connection",
+                              "cityLimits" => "Inside"
                             }
       end
 
@@ -24,7 +24,7 @@ describe Genability::Client do
 
         it "should return the inputs required to use the calculate method" do
           metadata = @client.calculate_metadata(
-                       @master_tariff_id, @from, @to, @metadata_options
+                       @master_tariff_id, @from, @to, { :additional_values => @metadata_options }
                      ).first
           metadata.unit.should == "kwh"
         end
@@ -38,11 +38,11 @@ describe Genability::Client do
         it "should calculate the total cost" do
           # First, get the Calculate Input metadata
           metadata = @client.calculate_metadata(
-                       @master_tariff_id, @from, @to, @metadata_options
+                       @master_tariff_id, @from, @to, { :additional_values => @metadata_options }
                      )
           # Then run the calculation with the input metadata
           calc = @client.calculate(
-                   @master_tariff_id, @from, @to, metadata
+                   @master_tariff_id, @from, @to, metadata, {}
                  )
           calc.tariff_name.should == "Residential Service"
           calc.items.first.rate_name.should == "Basic Service Charge"

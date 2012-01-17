@@ -1,28 +1,32 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.genability.com:80/rest/public/timeofuses/2756/1?appId=ValidAppID&appKey=ValidAppKey
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:33 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:45:03 GMT
-    body: "{\"status\":\"success\",\"count\":1,\"type\":\"TimeOfUseGroup\",\"results\":[{\"lseId\":2756,\"touGroupId\":1,\"timeOfUses\":[{\"touId\":1,\"touGroupId\":1,\"lseId\":2756,\"touName\":\"Summer On-Peak\",\"calendarId\":null,\"isDynamic\":false,\"season\":{\"seasonId\":315,\"lseId\":2756,\"seasonGroupId\":3,\"seasonName\":\"Summer\",\"seasonFromMonth\":6,\"seasonFromDay\":1,\"seasonToMonth\":9,\"seasonToDay\":30},\"touPeriods\":[{\"touPeriodId\":1,\"touId\":1,\"fromDayOfWeek\":0,\"fromHour\":14,\"fromMinute\":0,\"toDayOfWeek\":4,\"toHour\":19,\"toMinute\":0}]},{\"touId\":2,\"touGroupId\":1,\"lseId\":2756,\"touName\":\"Summer Off-Peak\",\"calendarId\":34,\"isDynamic\":false,\"season\":{\"seasonId\":315,\"lseId\":2756,\"seasonGroupId\":3,\"seasonName\":\"Summer\",\"seasonFromMonth\":6,\"seasonFromDay\":1,\"seasonToMonth\":9,\"seasonToDay\":30},\"touPeriods\":[{\"touPeriodId\":2,\"touId\":2,\"fromDayOfWeek\":0,\"fromHour\":19,\"fromMinute\":0,\"toDayOfWeek\":4,\"toHour\":14,\"toMinute\":0},{\"touPeriodId\":2037,\"touId\":2,\"fromDayOfWeek\":5,\"fromHour\":14,\"fromMinute\":0,\"toDayOfWeek\":6,\"toHour\":19,\"toMinute\":0}]}]}]}"
-    http_version: "1.1"
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":"TimeOfUseGroup","results":[{"lseId":2756,"touGroupId":1,"timeOfUses":[{"touId":1,"touGroupId":1,"lseId":2756,"touName":"Summer
+      On-Peak","calendarId":null,"isDynamic":false,"season":{"seasonId":315,"lseId":2756,"seasonGroupId":3,"seasonName":"Summer","seasonFromMonth":6,"seasonFromDay":1,"seasonToMonth":9,"seasonToDay":30},"touPeriods":[{"touPeriodId":1,"touId":1,"fromDayOfWeek":0,"fromHour":14,"fromMinute":0,"toDayOfWeek":4,"toHour":19,"toMinute":0}]},{"touId":2,"touGroupId":1,"lseId":2756,"touName":"Summer
+      Off-Peak","calendarId":34,"isDynamic":false,"season":{"seasonId":315,"lseId":2756,"seasonGroupId":3,"seasonName":"Summer","seasonFromMonth":6,"seasonFromDay":1,"seasonToMonth":9,"seasonToDay":30},"touPeriods":[{"touPeriodId":2,"touId":2,"fromDayOfWeek":0,"fromHour":19,"fromMinute":0,"toDayOfWeek":6,"toHour":14,"toMinute":0},{"touPeriodId":2037,"touId":2,"fromDayOfWeek":5,"fromHour":14,"fromMinute":0,"toDayOfWeek":6,"toHour":19,"toMinute":0}]}]}]}'
+    http_version: '1.1'

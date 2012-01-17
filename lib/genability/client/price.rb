@@ -39,7 +39,7 @@ module Genability
       def prices_params(from_date_time, options)
         {
           "fromDateTime" => format_to_iso8601(from_date_time),
-          "toDateTime" => format_to_iso8601(options[:to]),
+          "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
           "territoryId" => options[:territory_id],
           "consumptionAmount" => options[:consumption_amount],
           "demandAmount" => options[:demand_amount]

@@ -51,6 +51,14 @@ describe Genability::Client do
           tariff.tariff_id.should == 512
         end
 
+        it "should return a tariff with rates and properties" do
+          tariff = @client.tariff(512, { :populate_rates => 'ture', :populate_properties => 'true' })
+          tariff.should be_a Hashie::Mash
+          tariff.properties.count.should > 0
+          tariff.rates.count.should > 0
+          tariff.tariff_id.should == 512
+        end
+
       end
 
     end

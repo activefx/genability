@@ -1,28 +1,33 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.genability.com:80/rest/public/zipcodes/48322?appId=ValidAppID&appKey=ValidAppKey
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:22 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:45:05 GMT
-    body: "{\"status\":\"success\",\"count\":1,\"type\":\"Zipcode\",\"results\":[{\"state\":\"MI\",\"timeZone\":5,\"zipcode\":\"48322\",\"latitude\":42.542943,\"longitude\":-83.379712,\"city\":\"WEST BLOOMFIELD\",\"county\":\"OAKLAND\",\"areaCode\":\"248/734\",\"cityType\":\"B\",\"cityAliasAbbreviation\":\"W BLOOMFIELD\",\"elevation\":943,\"dayLightSaving\":true,\"classificationCode\":null,\"cityMixedCase\":\"West Bloomfield\",\"cityAliasMixedCase\":\"West Bloomfield\",\"stateAnsi\":26,\"countyAnsi\":125}]}"
-    http_version: "1.1"
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":"Zipcode","results":[{"state":"MI","timeZone":5,"zipcode":"48322","latitude":42.542943,"longitude":-83.379712,"city":"WEST
+      BLOOMFIELD","county":"OAKLAND","areaCode":"248/734","cityType":"B","cityAliasAbbreviation":"W
+      BLOOMFIELD","elevation":943,"dayLightSaving":true,"classificationCode":null,"cityMixedCase":"West
+      Bloomfield","cityAliasMixedCase":"West Bloomfield","stateAnsi":26,"countyAnsi":125}]}'
+    http_version: '1.1'

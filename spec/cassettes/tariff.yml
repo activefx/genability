@@ -1,28 +1,97 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.genability.com:80/rest/public/tariffs/512?appId=ValidAppID&appKey=ValidAppKey
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:37 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 06:45:02 GMT
-    body: "{\"status\":\"success\",\"count\":1,\"type\":\"Tariff\",\"results\":[{\"tariffId\":512,\"masterTariffId\":512,\"priorTariffId\":null,\"lseId\":2756,\"lseName\":\"Georgia Power Co\",\"distributionLseId\":null,\"tariffCode\":\"R-17\",\"tariffName\":\"Residential Service\",\"tariffType\":\"DEFAULT\",\"customerClass\":\"RESIDENTIAL\",\"territoryId\":3114,\"effectiveDate\":\"2011-03-01\",\"endDate\":null,\"timeZone\":\"US/Eastern\",\"isActive\":true,\"billingPeriod\":\"MONTHLY\",\"currency\":\"USD\",\"properties\":null,\"rates\":null}]}"
-    http_version: "1.1"
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":"Tariff","results":[{"tariffId":512,"masterTariffId":512,"priorTariffId":null,"lseId":2756,"lseName":"Georgia
+      Power Co","distributionLseId":null,"tariffCode":"R-17","tariffName":"Residential
+      Service","tariffType":"DEFAULT","customerClass":"RESIDENTIAL","territoryId":3114,"effectiveDate":"2011-03-01","endDate":null,"timeZone":"US/Eastern","isActive":true,"billingPeriod":"MONTHLY","currency":"USD"}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.genability.com:80/rest/public/tariffs/512?appId=ValidAppID&appKey=ValidAppKey&populateProperties=true&populateRates=true
+    body: 
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 17 Jan 2012 10:31:48 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":"Tariff","results":[{"tariffId":512,"masterTariffId":512,"priorTariffId":null,"lseId":2756,"lseName":"Georgia
+      Power Co","distributionLseId":null,"tariffCode":"R-17","tariffName":"Residential
+      Service","tariffType":"DEFAULT","customerClass":"RESIDENTIAL","territoryId":3114,"effectiveDate":"2011-03-01","endDate":null,"timeZone":"US/Eastern","isActive":true,"billingPeriod":"MONTHLY","currency":"USD","properties":[{"keyName":"consumption","displayName":"Consumption
+      (kWh)","family":"load","keyspace":"electricity","description":"Quantity in kWh
+      of load that is used for a period of time","dataType":"DECIMAL","choices":[],"propertyTypes":"RATE_CRITERIA","operator":null,"isDefault":false},{"keyName":"connectionType","displayName":"Connection
+      Type","family":"service","keyspace":"electricity","description":"Where/how the
+      service is connected to the grid (e.g. primary, transmission, subtransmission).","dataType":"CHOICE","choices":[{"value":"Secondary
+      Connection","displayValue":"Secondary Connection"},{"value":"Primary Connection","displayValue":"Primary
+      Connection"},{"value":"Subtransmission Connection","displayValue":"Subtransmission
+      Connection"},{"value":"Transmission Connection","displayValue":"Transmission
+      Connection"},{"value":"High Voltage","displayValue":"High Voltage"}],"propertyTypes":"RATE_CRITERIA","operator":null,"isDefault":false},{"keyName":"cityLimits","displayName":"City
+      Limits","family":"service","keyspace":"electricity","description":"Is this service
+      inside or outside city limits.","dataType":"CHOICE","choices":[{"value":"Inside","displayValue":"Inside"},{"value":"Outside","displayValue":"Outside"}],"propertyTypes":"RATE_CRITERIA","operator":null,"isDefault":false}],"rates":[{"tariffRateId":2734,"tariffId":512,"riderId":null,"tariffSequenceNumber":0,"rateGroupName":"Basic
+      Service Charge","rateName":"Basic Service Charge","territory":null,"season":null,"timeOfUse":null,"chargeType":"FIXED_PRICE","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[{"tariffRateBandId":3258,"tariffRateId":2734,"rateSequenceNumber":1,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":null,"calculationFactor":null,"rateAmount":9.000000,"rateUnit":"COST_PER_UNIT","isCredit":false}]},{"tariffRateId":2738,"tariffId":512,"riderId":504,"tariffSequenceNumber":1,"rateGroupName":"Basic
+      Service Charge","rateName":"Demand Side Management - Residential Rider","territory":null,"season":null,"timeOfUse":null,"chargeType":null,"chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[]},{"tariffRateId":2739,"tariffId":512,"riderId":505,"tariffSequenceNumber":2,"rateGroupName":"Basic
+      Service Charge","rateName":"Environmental Compliance Cost Recovery Schedule","territory":null,"season":null,"timeOfUse":null,"chargeType":null,"chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[]},{"tariffRateId":2740,"tariffId":512,"riderId":506,"tariffSequenceNumber":3,"rateGroupName":"Basic
+      Service Charge","rateName":"Fuel Cost Recovery Schedule (Secondary)","territory":null,"season":null,"timeOfUse":null,"chargeType":null,"chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[]},{"tariffRateId":2741,"tariffId":512,"riderId":509,"tariffSequenceNumber":4,"rateGroupName":"Basic
+      Service Charge","rateName":"Municipal Franchise Fee (Inside City Limits)","territory":null,"season":null,"timeOfUse":null,"chargeType":null,"chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[]},{"tariffRateId":2742,"tariffId":512,"riderId":511,"tariffSequenceNumber":5,"rateGroupName":"Basic
+      Service Charge","rateName":"Nuclear Compliance Cost Recovery","territory":null,"season":null,"timeOfUse":null,"chargeType":null,"chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[]},{"tariffRateId":2735,"tariffId":512,"riderId":null,"tariffSequenceNumber":6,"rateGroupName":"Energy
+      Charges","rateName":"Winter Energy Charges","territory":null,"season":{"seasonId":314,"lseId":2756,"seasonGroupId":3,"seasonName":"Winter","seasonFromMonth":10,"seasonFromDay":1,"seasonToMonth":5,"seasonToDay":31},"timeOfUse":null,"chargeType":"CONSUMPTION_BASED","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[{"tariffRateBandId":3259,"tariffRateId":2735,"rateSequenceNumber":1,"hasConsumptionLimit":true,"consumptionUpperLimit":650.0,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":null,"calculationFactor":null,"rateAmount":5.063300,"rateUnit":"COST_PER_UNIT","isCredit":false},{"tariffRateBandId":3260,"tariffRateId":2735,"rateSequenceNumber":2,"hasConsumptionLimit":true,"consumptionUpperLimit":1000.0,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":null,"calculationFactor":null,"rateAmount":4.344300,"rateUnit":"COST_PER_UNIT","isCredit":false},{"tariffRateBandId":3261,"tariffRateId":2735,"rateSequenceNumber":3,"hasConsumptionLimit":true,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":null,"calculationFactor":null,"rateAmount":4.264700,"rateUnit":"COST_PER_UNIT","isCredit":false}]},{"tariffRateId":2736,"tariffId":512,"riderId":null,"tariffSequenceNumber":7,"rateGroupName":"Energy
+      Charges","rateName":"Summer Energy Charges","territory":null,"season":{"seasonId":315,"lseId":2756,"seasonGroupId":3,"seasonName":"Summer","seasonFromMonth":6,"seasonFromDay":1,"seasonToMonth":9,"seasonToDay":30},"timeOfUse":null,"chargeType":"CONSUMPTION_BASED","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[{"tariffRateBandId":3262,"tariffRateId":2736,"rateSequenceNumber":1,"hasConsumptionLimit":true,"consumptionUpperLimit":650.0,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":null,"calculationFactor":null,"rateAmount":5.063300,"rateUnit":"COST_PER_UNIT","isCredit":false},{"tariffRateBandId":3263,"tariffRateId":2736,"rateSequenceNumber":2,"hasConsumptionLimit":true,"consumptionUpperLimit":1000.0,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":null,"calculationFactor":null,"rateAmount":8.416600,"rateUnit":"COST_PER_UNIT","isCredit":false},{"tariffRateBandId":3264,"tariffRateId":2736,"rateSequenceNumber":3,"hasConsumptionLimit":true,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":null,"calculationFactor":null,"rateAmount":8.670100,"rateUnit":"COST_PER_UNIT","isCredit":false}]},{"tariffRateId":2737,"tariffId":512,"riderId":null,"tariffSequenceNumber":8,"rateGroupName":"Minimum
+      Monthly Bill","rateName":"Minimum Charge","territory":null,"season":null,"timeOfUse":null,"chargeType":"MINIMUM","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[{"tariffRateBandId":3265,"tariffRateId":2737,"rateSequenceNumber":1,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":null,"calculationFactor":null,"rateAmount":9.000000,"rateUnit":"COST_PER_UNIT","isCredit":false}]},{"tariffRateId":16959920,"tariffId":2634713,"riderId":null,"tariffSequenceNumber":5,"rateGroupName":"Demand
+      Side Management Residential Schedule","rateName":"Demand Side Management Residential
+      Schedule","territory":null,"season":null,"timeOfUse":null,"chargeType":"FIXED_PRICE","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[{"tariffRateBandId":10139634,"tariffRateId":16959920,"rateSequenceNumber":1,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"","calculationFactor":null,"rateAmount":1.912600,"rateUnit":"PERCENTAGE","isCredit":false}]},{"tariffRateId":2724,"tariffId":505,"riderId":null,"tariffSequenceNumber":5,"rateGroupName":"Environmental
+      Compliance Cost Recovery Schedule","rateName":"Environmental Compliance Cost
+      Recovery Schedule","territory":null,"season":null,"timeOfUse":null,"chargeType":"FIXED_PRICE","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[{"tariffRateBandId":3248,"tariffRateId":2724,"rateSequenceNumber":1,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"","calculationFactor":null,"rateAmount":10.013100,"rateUnit":"PERCENTAGE","isCredit":false}]},{"tariffRateId":1444637,"tariffId":122836,"riderId":null,"tariffSequenceNumber":5,"rateGroupName":"Fuel
+      Cost Recovery Schedule","rateName":"Summer","territory":null,"season":{"seasonId":315,"lseId":2756,"seasonGroupId":3,"seasonName":"Summer","seasonFromMonth":6,"seasonFromDay":1,"seasonToMonth":9,"seasonToDay":30},"timeOfUse":null,"chargeType":"CONSUMPTION_BASED","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":"connectionType","variableLimitKey":null,"rateBands":[{"tariffRateBandId":1415252,"tariffRateId":1444637,"rateSequenceNumber":1,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"Secondary
+      Connection","calculationFactor":null,"rateAmount":4.652500,"rateUnit":"COST_PER_UNIT","isCredit":false},{"tariffRateBandId":1415268,"tariffRateId":1444637,"rateSequenceNumber":2,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"Primary
+      Connection","calculationFactor":null,"rateAmount":4.603900,"rateUnit":"COST_PER_UNIT","isCredit":false},{"tariffRateBandId":1415269,"tariffRateId":1444637,"rateSequenceNumber":3,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"Transmission
+      Connection","calculationFactor":null,"rateAmount":4.537300,"rateUnit":"COST_PER_UNIT","isCredit":false}]},{"tariffRateId":1444638,"tariffId":122836,"riderId":null,"tariffSequenceNumber":5,"rateGroupName":"Fuel
+      Cost Recovery Schedule","rateName":"Winter","territory":null,"season":{"seasonId":314,"lseId":2756,"seasonGroupId":3,"seasonName":"Winter","seasonFromMonth":10,"seasonFromDay":1,"seasonToMonth":5,"seasonToDay":31},"timeOfUse":null,"chargeType":"CONSUMPTION_BASED","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":"connectionType","variableLimitKey":null,"rateBands":[{"tariffRateBandId":1415253,"tariffRateId":1444638,"rateSequenceNumber":1,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"Secondary
+      Connection","calculationFactor":null,"rateAmount":4.072800,"rateUnit":"COST_PER_UNIT","isCredit":false},{"tariffRateBandId":1415270,"tariffRateId":1444638,"rateSequenceNumber":2,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"Primary
+      Connection","calculationFactor":null,"rateAmount":4.030300,"rateUnit":"COST_PER_UNIT","isCredit":false},{"tariffRateBandId":1415271,"tariffRateId":1444638,"rateSequenceNumber":3,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"Transmission
+      Connection","calculationFactor":null,"rateAmount":3.972000,"rateUnit":"COST_PER_UNIT","isCredit":false}]},{"tariffRateId":1444636,"tariffId":509,"riderId":null,"tariffSequenceNumber":5,"rateGroupName":"Municipal
+      Franchise Fee Schedule","rateName":"Municipal Franchise Fee Schedule","territory":null,"season":null,"timeOfUse":null,"chargeType":"QUANTITY","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":"cityLimits","variableLimitKey":null,"rateBands":[{"tariffRateBandId":1415250,"tariffRateId":1444636,"rateSequenceNumber":1,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"Inside","calculationFactor":null,"rateAmount":2.910900,"rateUnit":"PERCENTAGE","isCredit":false},{"tariffRateBandId":1415251,"tariffRateId":1444636,"rateSequenceNumber":2,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"Outside","calculationFactor":null,"rateAmount":1.080100,"rateUnit":"COST_PER_UNIT","isCredit":false}]},{"tariffRateId":16959921,"tariffId":2634714,"riderId":null,"tariffSequenceNumber":5,"rateGroupName":"Nuclear
+      Construction Cost Recovery Schedule","rateName":"Nuclear Construction Cost Recovery
+      Schedule","territory":null,"season":null,"timeOfUse":null,"chargeType":"FIXED_PRICE","chargePeriod":"MONTHLY","quantityKey":null,"applicabilityKey":null,"variableLimitKey":null,"rateBands":[{"tariffRateBandId":10139635,"tariffRateId":16959921,"rateSequenceNumber":1,"hasConsumptionLimit":false,"consumptionUpperLimit":null,"hasDemandLimit":false,"demandUpperLimit":null,"hasPropertyLimit":false,"propertyUpperLimit":null,"applicabilityValue":"","calculationFactor":null,"rateAmount":6.436200,"rateUnit":"PERCENTAGE","isCredit":false}]}]}]}'
+    http_version: '1.1'

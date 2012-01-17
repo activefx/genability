@@ -36,27 +36,35 @@ describe Genability::Client do
           lses.first.name.should_not be_nil
         end
 
-        it "should accept a startsWithWildCard parameter" do
-          lses = @client.load_serving_entities(:starts_with => 'In')
+        it "should accept a startsWith parameter" do
+          lses = @client.load_serving_entities(:search => 'In', :starts_with => 'true')
           lses.should_not be_empty
           lses.each do |result|
             result.name.should =~ /^In/
           end
         end
 
-        it "should accept an endsWithWildCard parameter" do
-          lses = @client.load_serving_entities(:ends_with => 'Inc')
+        it "should accept an endsWith parameter" do
+          lses = @client.load_serving_entities(:search => 'Inc', :ends_with => 'true')
           lses.should_not be_empty
           lses.each do |result|
             result.name.should =~ /Inc$/
           end
         end
 
-        it "should accept a containsWildCard parameter" do
-          lses = @client.load_serving_entities(:search_string => 'Energy')
+        it "should accept a search parameter" do
+          lses = @client.load_serving_entities(:search => 'Energy')
           lses.should_not be_empty
           lses.each do |result|
             result.name.should =~ /Energy/
+          end
+        end
+
+        it "should accept a regular expression search parameter" do
+          lses = @client.load_serving_entities(:search => 'ansa', :is_regex => 'true')
+          lses.should_not be_empty
+          lses.each do |result|
+            result.name.should =~ /ansa/
           end
         end
 

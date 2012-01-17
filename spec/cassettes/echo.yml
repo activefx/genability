@@ -1,57 +1,91 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.genability.com:80/rest/echo?appId=ValidAppID&appKey=ValidAppKey
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:39 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 07:11:39 GMT
-    body: "{\"status\":\"success\",\"count\":0,\"type\":null,\"results\":null}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":0,"type":null,"results":null}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.genability.com:80/rest/echo/validate?appId=ValidAppID&appKey=ValidAppKey&dateTime=2011-10-26T12:00:00.0-0400
+    body: 
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 17 Jan 2012 10:31:28 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":null,"results":[{"array":null,"integer":null,"dateTime":"2011-10-26T12:00:00.000-04:00"}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.genability.com:80/rest/echo/errors/500?appId=ValidAppID&appKey=ValidAppKey
     body: 
-    headers: 
-      accept: 
+    headers:
+      accept:
       - application/json; charset=utf-8
-      user-agent: 
+      user-agent:
       - Genability API Ruby Gem
-      accept-encoding: 
+      accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 500
       message: Internal Server Error
-    headers: 
-      server: 
-      - Apache-Coyote/1.1
-      x-error-detail: 
-      - A server error has occurred. Sorry. It has been logged and we will work to fix it.
-      content-type: 
+    headers:
+      content-type:
       - application/json;charset=utf-8
-      transfer-encoding: 
+      date:
+      - Tue, 17 Jan 2012 10:31:39 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      x-error-detail:
+      - A server error has occurred. Sorry. It has been logged and we will work to
+        fix it.
+      transfer-encoding:
       - chunked
-      date: 
-      - Wed, 26 Oct 2011 07:11:39 GMT
-    body: "{\"status\":\"error\",\"count\":0,\"type\":\"Error\",\"results\":null}"
-    http_version: "1.1"
+      connection:
+      - keep-alive
+    body: ! '{"status":"error","count":0,"type":"Error","results":null}'
+    http_version: '1.1'

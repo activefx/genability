@@ -28,7 +28,7 @@ describe Genability::Client do
 
         it "should get a list of properties" do
           properties = @client.properties
-          properties.first.display_name.should =~ /1000 kWh Block/
+          properties.first.display_name.should =~ /Provision for Surcharge Recovery AEP Class 1/
         end
 
         it "should get a list of properties for a specific entity" do
