@@ -12,7 +12,6 @@ Documentation
 
 Usage Examples
 --------------
-    require "rubygems"
     require "genability"
 
     # Configure during client initialization
@@ -77,9 +76,9 @@ Usage Examples
                  512,                                         # Master Tariff ID
                  "Monday, September 1st, 2011",               # From DateTime
                  "Monday, September 10th, 2011",              # To DateTime
-                 {                                            # Metadata Options
-                   :connection_type => "Primary Connection",
-                   :city_limits => "Inside"
+                 :additional_values => {                      # Metadata Options
+                   "connectionType" => "Primary Connection",
+                   "cityLimits" => "Inside"
                  }
                )
 
@@ -88,12 +87,13 @@ Usage Examples
                512,                                           # Master Tariff ID
                "Monday, September 1st, 2011",                 # From DateTime
                "Monday, September 10th, 2011",                # To DateTime
-               metadata                                       # Metadata from previous call
+               metadata,                                      # Metadata from previous call
+               {}                                             # Additional options
              )
     result.total_cost # => 10.837
 
 
-    # Please see the documentation for available options and the tests for additional examples
+    # Please see the [documentation](http://rubydoc.info/gems/genability/frames) for available options and the tests for additional examples
 
 
 Contributing to Genability

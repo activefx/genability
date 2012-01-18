@@ -1,0 +1,58 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: http://api.genability.com:80/rest/beta/accounts?appId=ValidAppID&appKey=ValidAppKey
+    body: ! '{"accountName":"Ruby Add Account Test"}'
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+      content-type:
+      - application/json;charset=utf-8
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Wed, 18 Jan 2012 06:27:55 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"1d80df7b-16eb-442c-9bfa-5525b1d8f6ac","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
+      Add Account Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :delete
+    uri: http://api.genability.com:80/rest/beta/accounts/1d80df7b-16eb-442c-9bfa-5525b1d8f6ac?appId=ValidAppID&appKey=ValidAppKey
+    body: 
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Wed, 18 Jan 2012 06:28:06 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":0,"type":"Account","results":null}'
+    http_version: '1.1'
