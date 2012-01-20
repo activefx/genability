@@ -97,14 +97,14 @@ module Genability
               a << convert_tariff_input_params(ti)
             end
           else
-            raise Genability::InvalidTariffInput
+            raise Genability::InvalidInput
           end
         end
       end
 
       def convert_tariff_input_params(tariff_input)
         return tariff_input.to_hash if tariff_input.is_a? Hashie::Mash
-        raise Genability::InvalidTariffInput unless tariff_input.is_a?(Hash)
+        raise Genability::InvalidInput unless tariff_input.is_a?(Hash)
         tariff_input
       end
 

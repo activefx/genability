@@ -56,7 +56,7 @@ describe Genability::Client do
               "Monday, September 10th, 2011",
               "InvalidTariffInput"
               )
-          end.should raise_error(Genability::InvalidTariffInput)
+          end.should raise_error(Genability::InvalidInput)
         end
 
       end

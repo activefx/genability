@@ -1,0 +1,116 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: http://api.genability.com:80/rest/beta/accounts?appId=ValidAppID&appKey=ValidAppKey
+    body: ! '{"accountName":"Ruby Usage Profile Test"}'
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+      content-type:
+      - application/json;charset=utf-8
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jan 2012 13:06:10 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"243cb00e-089e-4cd0-8ba8-f15df9bb5c7a","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
+      Usage Profile Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: http://api.genability.com:80/rest/beta/usage/profiles?appId=ValidAppID&appKey=ValidAppKey
+    body: ! '{"accountId":"243cb00e-089e-4cd0-8ba8-f15df9bb5c7a"}'
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+      content-type:
+      - application/json;charset=utf-8
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jan 2012 13:05:59 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"15e8c512-853c-4909-853e-7b7e785d6029","profileName":null,"accountId":"243cb00e-089e-4cd0-8ba8-f15df9bb5c7a","description":null,"sourceId":null,"readingDataSummaries":null,"readingData":null}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.genability.com:80/rest/beta/usage/profiles/15e8c512-853c-4909-853e-7b7e785d6029?appId=ValidAppID&appKey=ValidAppKey
+    body: 
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jan 2012 13:06:12 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"15e8c512-853c-4909-853e-7b7e785d6029","profileName":null,"accountId":"243cb00e-089e-4cd0-8ba8-f15df9bb5c7a","description":null,"sourceId":null,"readingDataSummaries":null,"readingData":null}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :delete
+    uri: http://api.genability.com:80/rest/beta/accounts/243cb00e-089e-4cd0-8ba8-f15df9bb5c7a?appId=ValidAppID&appKey=ValidAppKey
+    body: 
+    headers:
+      accept:
+      - application/json; charset=utf-8
+      user-agent:
+      - Genability API Ruby Gem
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Fri, 20 Jan 2012 13:06:01 GMT
+      server:
+      - Apache/2.2.16 (Ubuntu)
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body: ! '{"status":"success","count":0,"type":"Account","results":null}'
+    http_version: '1.1'

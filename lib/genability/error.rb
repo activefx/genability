@@ -19,7 +19,7 @@ module Genability
 
   # Raised when the tariff input for the calculate method is
   # not an array or hash
-  class InvalidTariffInput < Error; end
+  class InvalidInput < Error; end
 
 end
 

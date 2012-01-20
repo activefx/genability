@@ -107,7 +107,7 @@ module Genability
           'lseId' => options[:lse_id],
           'effectiveOn' => format_to_iso8601(options[:effective_on]),
           'fromDateTime' => format_to_iso8601(options[:from] || options[:from_date_time]),
-          "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
+          'toDateTime' => format_to_iso8601(options[:to] || options[:to_date_time]),
           'customerClasses' => multi_option_handler(options[:customer_classes]),
           'tariffTypes' => multi_option_handler(options[:tariff_types]),
           'zipCode' => options[:zip_code],
