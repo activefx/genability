@@ -69,6 +69,39 @@ Usage Examples
     # Get information about a zipcode
     Genability.zipcode('48322')
 
+    # Add an account
+    Genability.add_account(:account_name => 'New Account')
+
+    # Show account
+    Genability.account("account_id")
+
+    # Get a list of accounts
+    Genability.accounts
+
+    # Delete account
+    Genability.delete_account("account_id")
+
+    # Add a usage profile
+    Genability.add_usage_profile(:account_id => "account_id")
+
+    # Show a usage profile
+    Genability.usage_profile("usage_profile_id")
+
+    # List usage profile
+    Genability.usage_profiles
+
+    # Add a reading(s) to a usage profile
+    Genability.add_readings("usage_profile_id", :readings =>
+      [
+        {
+          :from => "2011-08-01T22:30:00.000-0700",
+          :to => "2011-08-01T22:45:00.000-0700",
+          :quantity_unit => "kWh",
+          :quantity_value => 220
+        }
+      ]
+    )
+
     # Calculate the cost of electricity for a given rate plan
     #
     # First, get the caculation metadata necessary to run the calculation
@@ -93,7 +126,8 @@ Usage Examples
     result.total_cost # => 10.837
 
 
-    # Please see the [documentation](http://rubydoc.info/gems/genability/frames) for available options and the tests for additional examples
+
+Please see the [documentation](http://rubydoc.info/gems/genability/frames) for available options and the tests for additional examples
 
 
 Contributing to Genability
