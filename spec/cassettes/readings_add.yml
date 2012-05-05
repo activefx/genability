@@ -16,24 +16,26 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:46:09 GMT
+      - Sat, 05 May 2012 18:43:34 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"217d6835-69e5-4f71-8890-1d8ff5c6f99e","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
-      Add Readings Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null}]}'
+    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"13801f0f-181d-4409-ab41-ce6367f06c80","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
+      Add Readings Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null,"tariffs":null}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :post
     uri: http://api.genability.com:80/rest/beta/usage/profiles?appId=ValidAppID&appKey=ValidAppKey
-    body: ! '{"accountId":"217d6835-69e5-4f71-8890-1d8ff5c6f99e"}'
+    body: ! '{"accountId":"13801f0f-181d-4409-ab41-ce6367f06c80"}'
     headers:
       accept:
       - application/json; charset=utf-8
@@ -46,22 +48,24 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:46:21 GMT
+      - Sat, 05 May 2012 18:43:34 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"4adb9413-781a-42e4-b5e4-bd3767884a56","profileName":null,"accountId":"217d6835-69e5-4f71-8890-1d8ff5c6f99e","description":null,"sourceId":null,"readingDataSummaries":null,"readingData":null}]}'
+    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"41afdee6-b7e8-40cf-8611-ab83eac73dd8","accountId":"13801f0f-181d-4409-ab41-ce6367f06c80","dataStatus":null}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :post
-    uri: http://api.genability.com:80/rest/beta/usage/profiles/4adb9413-781a-42e4-b5e4-bd3767884a56/readings?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/beta/usage/profiles/41afdee6-b7e8-40cf-8611-ab83eac73dd8/readings?appId=ValidAppID&appKey=ValidAppKey
     body: ! '{"readings":[{"fromDateTime":"2011-08-02T01:30:00.0-0400","toDateTime":"2011-08-02T01:45:00.0-0400","quantityUnit":"kWh","quantityValue":220}]}'
     headers:
       accept:
@@ -75,10 +79,12 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:46:10 GMT
+      - Sat, 05 May 2012 18:43:34 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
@@ -90,7 +96,7 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://api.genability.com:80/rest/beta/usage/profiles/4adb9413-781a-42e4-b5e4-bd3767884a56?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/beta/usage/profiles/41afdee6-b7e8-40cf-8611-ab83eac73dd8?appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers:
       accept:
@@ -104,22 +110,24 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:46:39 GMT
+      - Sat, 05 May 2012 18:43:35 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"4adb9413-781a-42e4-b5e4-bd3767884a56","profileName":null,"accountId":"217d6835-69e5-4f71-8890-1d8ff5c6f99e","description":null,"sourceId":null,"readingDataSummaries":[{"quantityUnit":"kWh","numberOfReadings":1,"fromDateTime":"2011-08-02T05:30:00.000+00:00","toDateTime":"2011-08-02T05:45:00.000+00:00"}],"readingData":null}]}'
+    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"41afdee6-b7e8-40cf-8611-ab83eac73dd8","accountId":"13801f0f-181d-4409-ab41-ce6367f06c80","dataStatus":0,"readingDataSummaries":[{"quantityUnit":"kWh","numberOfReadings":1,"fromDateTime":"2011-08-02T01:30:00+00:00","toDateTime":"2011-08-02T01:45:00+00:00"}]}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :delete
-    uri: http://api.genability.com:80/rest/beta/accounts/217d6835-69e5-4f71-8890-1d8ff5c6f99e?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/beta/accounts/13801f0f-181d-4409-ab41-ce6367f06c80?appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers:
       accept:
@@ -131,10 +139,12 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:46:28 GMT
+      - Sat, 05 May 2012 18:43:35 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:

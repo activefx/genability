@@ -16,64 +16,67 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:35:05 GMT
+      - Sat, 05 May 2012 18:43:30 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":3,"type":"PropertyData","results":[{"keyName":"consumption","dataType":"DECIMAL","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","unit":"kwh"},{"keyName":"cityLimits","displayName":"City
-      Limits","description":"Is this service inside or outside city limits.","dataType":"CHOICE","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","dataValue":"Inside"},{"keyName":"connectionType","displayName":"Connection
-      Type","description":"Where/how the service is connected to the grid (e.g. primary,
-      transmission, subtransmission).","dataType":"CHOICE","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","dataValue":"Primary
-      Connection"}]}'
+    body: ! '{"status":"success","count":3,"type":"PropertyData","results":[{"keyName":"consumption","dataType":"DECIMAL","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00","unit":"kwh"},{"keyName":"cityLimits","displayName":"Service
+      Area (Inside/outside city limits)","description":"Has service inside or outside
+      city limits","dataType":"CHOICE","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00"},{"keyName":"connectionType","displayName":"Connection
+      Type","description":"Where or how the service is connected to the grid (e.g.
+      primary, transmission, subtransmission).","dataType":"CHOICE","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00"}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :post
-    uri: http://api.genability.com:80/rest/beta/calculate/512
-    body: ! '{"fromDateTime":"2011-09-01T00:00:00.0-0400","toDateTime":"2011-09-10T00:00:00.0-0400","tariffInputs":[{"keyName":"consumption","dataType":"DECIMAL","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","unit":"kwh"},{"keyName":"cityLimits","displayName":"City
-      Limits","description":"Is this service inside or outside city limits.","dataType":"CHOICE","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","dataValue":"Inside"},{"keyName":"connectionType","displayName":"Connection
-      Type","description":"Where/how the service is connected to the grid (e.g. primary,
-      transmission, subtransmission).","dataType":"CHOICE","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","dataValue":"Primary
-      Connection"}],"appId":"ValidAppID","appKey":"ValidAppKey"}'
+    uri: http://api.genability.com:80/rest/beta/calculate/512?appId=ValidAppID&appKey=ValidAppKey
+    body: ! '{"fromDateTime":"2011-09-01T00:00:00.0-0400","toDateTime":"2011-09-10T00:00:00.0-0400","tariffInputs":[{"keyName":"consumption","dataType":"DECIMAL","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00","unit":"kwh"},{"keyName":"cityLimits","displayName":"Service
+      Area (Inside/outside city limits)","description":"Has service inside or outside
+      city limits","dataType":"CHOICE","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00"},{"keyName":"connectionType","displayName":"Connection
+      Type","description":"Where or how the service is connected to the grid (e.g.
+      primary, transmission, subtransmission).","dataType":"CHOICE","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00"}]}'
     headers:
       accept:
       - application/json; charset=utf-8
       user-agent:
       - Genability API Ruby Gem
       content-type:
-      - application/json
+      - application/json;charset=utf-8
   response: !ruby/struct:VCR::Response
     status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:35:16 GMT
+      - Sat, 05 May 2012 18:43:31 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
-      content-length:
-      - '3324'
+      transfer-encoding:
+      - chunked
       connection:
       - keep-alive
     body: ! '{"status":"success","count":1,"type":"CalculatedCost","results":[{"masterTariffId":512,"tariffName":"Residential
-      Service","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","totalCost":10.914552,"accuracy":1.000000,"items":[{"tariffRateId":2734,"tariffRateBandId":3258,"rateGroupName":"Basic
-      Service Charge","rateName":"Basic Service Charge","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","rateType":"COST_PER_UNIT","quantityKey":"fixed","itemQuantity":1.000000,"itemCount":1,"cost":9.000000,"rateAmount":9.000000},{"tariffRateId":16959920,"tariffRateBandId":10139634,"rateGroupName":"Demand
-      Side Management Residential Schedule","rateName":"Demand Side Management Residential
-      Schedule","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","rateType":"PERCENTAGE","quantityKey":"fixed","itemQuantity":1.000000,"itemCount":1,"cost":0.172134,"rateAmount":0.172134},{"tariffRateId":2724,"tariffRateBandId":3248,"rateGroupName":"Environmental
-      Compliance Cost Recovery Schedule","rateName":"Environmental Compliance Cost
-      Recovery Schedule","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","rateType":"PERCENTAGE","quantityKey":"fixed","itemQuantity":1.000000,"itemCount":1,"cost":0.901179,"rateAmount":0.901179},{"tariffRateId":1444637,"tariffRateBandId":1415268,"rateGroupName":"Fuel
-      Cost Recovery Schedule","rateName":"Summer","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","rateType":"COST_PER_UNIT","quantityKey":"consumption","itemQuantity":0.000000,"itemCount":1,"cost":0.000000,"rateAmount":0.000000},{"tariffRateId":1444636,"tariffRateBandId":1415250,"rateGroupName":"Municipal
-      Franchise Fee Schedule","rateName":"Municipal Franchise Fee Schedule","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","rateType":"PERCENTAGE","quantityKey":"QUANTITY","itemQuantity":1.000000,"itemCount":1,"cost":0.261981,"rateAmount":0.261981},{"tariffRateId":16959921,"tariffRateBandId":10139635,"rateGroupName":"Nuclear
-      Construction Cost Recovery Schedule","rateName":"Nuclear Construction Cost Recovery
-      Schedule","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","rateType":"PERCENTAGE","quantityKey":"fixed","itemQuantity":1.000000,"itemCount":1,"cost":0.579258,"rateAmount":0.579258},{"tariffRateId":2736,"tariffRateBandId":3262,"rateGroupName":"Energy
-      Charges","rateName":"Summer Energy Charges","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","rateType":"COST_PER_UNIT","quantityKey":"consumption","itemQuantity":0.000000,"itemCount":1,"cost":0.000000,"rateAmount":0.000000},{"tariffRateId":2737,"tariffRateBandId":3265,"rateGroupName":"Minimum
-      Monthly Bill","rateName":"Minimum Charge","fromDateTime":"2011-09-01T00:00:00.000-04:00","toDateTime":"2011-09-10T00:00:00.000-04:00","rateType":"COST_PER_UNIT","quantityKey":"minimum","itemQuantity":1.000000,"itemCount":1,"cost":0.000000,"rateAmount":0.000000}],"assumptions":[{"keyName":"tariffId","dataType":"INTEGER","fromDateTime":"2011-09-01T04:00:00.000+00:00","toDateTime":"2011-09-10T04:00:00.000+00:00","dataValue":"512","accuracy":1}]}]}'
+      Service","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00","totalCost":2.865347,"accuracy":1.000000,"items":[{"tariffRateId":2734,"tariffRateBandId":3258,"rateGroupName":"Basic
+      Service Charge","rateName":"Basic Service Charge","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-10-01T00:00:00-04:00","rateType":"COST_PER_UNIT","quantityKey":"fixed","itemQuantity":1.000000,"itemCount":1,"cost":2.700000},{"tariffRateId":2736,"tariffRateBandId":3262,"rateGroupName":"Energy
+      Charges","rateName":"Summer Rate","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-10-01T00:00:00-04:00","rateType":"COST_PER_UNIT","quantityKey":"consumption","itemQuantity":0.000000,"itemCount":1,"cost":0.000000},{"tariffRateId":16977076,"tariffRateBandId":10162044,"rateGroupName":"Fuel
+      Cost Recovery Charge","rateName":"Secondary Distribution Customer - Summer","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-10-01T00:00:00-04:00","rateType":"COST_PER_UNIT","quantityKey":"consumption","itemQuantity":0.000000,"itemCount":1,"cost":0.000000},{"tariffRateId":16977071,"tariffRateBandId":10162039,"rateGroupName":"Environmental
+      Compliance Cost Recovery Charge","rateName":"Environmental Compliance Cost Recovery
+      Charge","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-10-01T00:00:00-04:00","rateType":"PERCENTAGE","quantityKey":"QUANTITY","itemQuantity":1.000000,"rateAmount":10.013100,"itemCount":1,"cost":0.081106},{"tariffRateId":16977072,"tariffRateBandId":10162040,"rateGroupName":"Nuclear
+      Construction Cost Recovery Charge","rateName":"Nuclear Construction Cost Recovery
+      Charge","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-10-01T00:00:00-04:00","rateType":"PERCENTAGE","quantityKey":"QUANTITY","itemQuantity":1.000000,"rateAmount":5.861900,"itemCount":1,"cost":0.047481},{"tariffRateId":16977073,"tariffRateBandId":10162041,"rateGroupName":"Demand
+      Side Management Charge","rateName":"Demand Side Management Charge","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-10-01T00:00:00-04:00","rateType":"PERCENTAGE","quantityKey":"QUANTITY","itemQuantity":1.000000,"rateAmount":1.627300,"itemCount":1,"cost":0.013181},{"tariffRateId":16977074,"tariffRateBandId":10162042,"rateGroupName":"Municipal
+      Franchise Fee","rateName":"Inside City Limit Customer","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-10-01T00:00:00-04:00","rateType":"PERCENTAGE","quantityKey":"QUANTITY","itemQuantity":1.000000,"rateAmount":2.910900,"itemCount":1,"cost":0.023578},{"tariffRateId":2737,"tariffRateBandId":3265,"rateGroupName":"Minimum
+      Charge","rateName":"Minimum Charge","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00","rateType":"COST_PER_UNIT","quantityKey":"minimum","itemQuantity":1.000000,"rateAmount":9.000000,"itemCount":1,"cost":0.000000}],"assumptions":[{"keyName":"tariffId","dataType":"INTEGER","fromDateTime":"2011-09-01T00:00:00-04:00","toDateTime":"2011-09-10T00:00:00-04:00","dataValue":"512","accuracy":1}]}]}'
     http_version: '1.1'

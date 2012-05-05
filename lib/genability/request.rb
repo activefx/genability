@@ -34,8 +34,13 @@ module Genability
           request.params['appKey'] = application_key
         when :post, :put
           request.path = path
-          request.headers['Content-Type'] = 'application/json;charset=utf-8'
-          request.body = options unless options.empty?
+          if options['fileData']
+            request.headers['Content-type'] = 'multipart/form-data'
+            request.body = options
+          else
+            request.headers['Content-Type'] = 'application/json;charset=utf-8'
+            request.body = options unless options.empty?
+          end
         end
       end
       raw ? response : response.body

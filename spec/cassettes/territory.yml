@@ -16,10 +16,12 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:31:31 GMT
+      - Sat, 05 May 2012 18:43:44 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
@@ -28,5 +30,5 @@
       - keep-alive
     body: ! '{"status":"success","count":1,"type":"Territory","results":[{"territoryId":3539,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      V","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false}]}'
+      V","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false}]}'
     http_version: '1.1'

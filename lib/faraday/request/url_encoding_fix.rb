@@ -1,6 +1,6 @@
 require 'faraday'
 require 'addressable/uri'
-
+require 'pry'
 # @private
 module Faraday
   # @private

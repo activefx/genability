@@ -23,6 +23,35 @@ module Genability
             )
       end
 
+      def bulk_upload(file, options = {})
+        profile_name = options[:profile_name] || "CsvUpload"
+
+        url = "beta/usage/bulk"
+        url += "/#{options[:usage_profile_id]}"
+        url += "?appId=#{application_id}&appKey=#{application_key}"
+        url += "&profileName=#{profile_name}"
+
+        payload = {
+          "fileData" => Faraday::UploadIO.new(file, 'text/csv')
+         }
+
+        post( url, payload)
+      end
+
+      def green_button(file, options = {})
+        profile_name = options[:profile_name] || "GreenButton"
+
+        url = "beta/usage/bulk"
+        url += "/#{options[:usage_profile_id]}"
+        url += "?appId=#{application_id}&appKey=#{application_key}"
+        url += "&profileName=#{profile_name}&fileFormat=espi"
+
+        payload = {
+          "fileData" => Faraday::UploadIO.new(file, 'application/xml')
+         }
+
+        post( url, payload)
+      end
 
       private
 

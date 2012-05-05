@@ -16,18 +16,20 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Wed, 18 Jan 2012 06:27:56 GMT
+      - Sat, 05 May 2012 18:45:43 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"abf16fd5-6aeb-4c81-a893-911a23714e67","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
-      Accounts Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null}]}'
+    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"956c50b8-12fe-4b9e-b407-7895795879bf","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
+      Accounts Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null,"tariffs":null}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
@@ -46,23 +48,25 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Wed, 18 Jan 2012 06:28:07 GMT
+      - Sat, 05 May 2012 18:45:44 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"abf16fd5-6aeb-4c81-a893-911a23714e67","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
-      Accounts Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null}]}'
+    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"956c50b8-12fe-4b9e-b407-7895795879bf","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
+      Accounts Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null,"tariffs":null}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :delete
-    uri: http://api.genability.com:80/rest/beta/accounts/abf16fd5-6aeb-4c81-a893-911a23714e67?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/beta/accounts/956c50b8-12fe-4b9e-b407-7895795879bf?appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers:
       accept:
@@ -74,10 +78,12 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Wed, 18 Jan 2012 06:27:56 GMT
+      - Sat, 05 May 2012 18:45:44 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:

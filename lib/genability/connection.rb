@@ -29,6 +29,8 @@ module Genability
           end
         end
         connection.use Faraday::Response::RaiseHttp5xx
+        connection.use Faraday::Request::Multipart
+        connection.use Faraday::Request::UrlEncoded
         connection.adapter(adapter)
       end
     end

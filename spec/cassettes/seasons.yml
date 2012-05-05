@@ -16,15 +16,19 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:31:32 GMT
+      - Sat, 05 May 2012 18:43:29 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"SeasonGroup","results":[{"lseId":null,"seasons":[{"seasonId":280,"lseId":734,"seasonGroupId":1,"seasonName":"Summer","seasonFromMonth":5,"seasonFromDay":1,"seasonToMonth":10,"seasonToDay":31},{"seasonId":281,"lseId":734,"seasonGroupId":1,"seasonName":"Winter","seasonFromMonth":11,"seasonFromDay":1,"seasonToMonth":4,"seasonToDay":30}],"seasonGroupId":1}]}'
+    body: ! '{"status":"success","count":2,"type":"SeasonGroup","results":[{"lseId":null,"seasons":[{"seasonId":280,"lseId":734,"seasonGroupId":1,"seasonName":"Summer","seasonFromMonth":5,"seasonFromDay":1,"seasonToMonth":10,"seasonToDay":31},{"seasonId":281,"lseId":734,"seasonGroupId":1,"seasonName":"Winter","seasonFromMonth":11,"seasonFromDay":1,"seasonToMonth":4,"seasonToDay":30}],"seasonGroupId":1},{"lseId":null,"seasons":[{"seasonId":692,"lseId":734,"seasonGroupId":2,"seasonName":"High
+      Price Period","seasonFromMonth":6,"seasonFromDay":1,"seasonToMonth":9,"seasonToDay":30},{"seasonId":693,"lseId":734,"seasonGroupId":2,"seasonName":"Low
+      Price Period","seasonFromMonth":10,"seasonFromDay":1,"seasonToMonth":5,"seasonToDay":31}],"seasonGroupId":2}]}'
     http_version: '1.1'

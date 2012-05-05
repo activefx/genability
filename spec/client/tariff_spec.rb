@@ -18,7 +18,7 @@ describe Genability::Client do
         it "should return an array of tariffs" do
           tariffs = @client.tariffs
           tariffs.should be_an Array
-          tariffs.first.tariff_id.should == 79
+          tariffs.first.tariff_id.should == 447
         end
 
         # this example also demonstrates searching within results
@@ -48,7 +48,7 @@ describe Genability::Client do
         it "should return a tariff" do
           tariff = @client.tariff(512)
           tariff.should be_a Hashie::Mash
-          tariff.tariff_id.should == 512
+          tariff.master_tariff_id.should == 512
         end
 
         it "should return a tariff with rates and properties" do
@@ -56,7 +56,7 @@ describe Genability::Client do
           tariff.should be_a Hashie::Mash
           tariff.properties.count.should > 0
           tariff.rates.count.should > 0
-          tariff.tariff_id.should == 512
+          tariff.master_tariff_id.should == 512
         end
 
       end

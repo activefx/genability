@@ -66,7 +66,7 @@ module Genability
       # @rate_limited true
       # @see https://developer.genability.com/documentation/api-reference/pricing/calculate
       def calculate(tariff_id, from, to, tariff_inputs, options = {})
-        post( "beta/calculate/#{tariff_id}",
+        post( "beta/calculate/#{tariff_id}?appId=#{application_id}&appKey=#{application_key}",
               calculate_params(from, to, tariff_inputs, options)
             ).results.first
       end
@@ -82,8 +82,6 @@ module Genability
           "tariffInputs" => tariff_input_params(tariff_inputs)
         }.
         delete_if{ |k,v| v.nil? }.
-        merge({ "appId" => application_id,
-                "appKey" => application_key }).
         to_json
       end
 

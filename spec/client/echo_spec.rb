@@ -25,7 +25,7 @@ describe Genability::Client do
 
         it "should validate a properly formatted date" do
           date = @client.send(:format_to_iso8601, "October 26th, 2011")
-          @client.validate('dateTime', date).date_time.should == "2011-10-26T12:00:00.000-04:00"
+          @client.validate('dateTime', date).date_time.should == "2011-10-26T12:00:00-04:00"
         end
 
       end

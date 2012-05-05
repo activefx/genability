@@ -40,7 +40,7 @@ describe Genability::Client do
           lses = @client.load_serving_entities(:search => 'In', :starts_with => 'true')
           lses.should_not be_empty
           lses.each do |result|
-            result.name.should =~ /^In/
+            result.name.should =~ /^In/i
           end
         end
 

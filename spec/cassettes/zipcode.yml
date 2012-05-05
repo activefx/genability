@@ -16,18 +16,20 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:31:22 GMT
+      - Sat, 05 May 2012 18:43:30 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"Zipcode","results":[{"state":"MI","timeZone":5,"zipcode":"48322","latitude":42.542943,"longitude":-83.379712,"city":"WEST
-      BLOOMFIELD","county":"OAKLAND","areaCode":"248/734","cityType":"B","cityAliasAbbreviation":"W
+    body: ! '{"status":"success","count":1,"type":"Zipcode","results":[{"state":"MI","timeZone":5,"zipcode":"48322","city":"WEST
+      BLOOMFIELD","latitude":42.542943,"longitude":-83.379712,"county":"OAKLAND","areaCode":"248/734","cityType":"B","cityAliasAbbreviation":"W
       BLOOMFIELD","elevation":943,"dayLightSaving":true,"classificationCode":null,"cityMixedCase":"West
       Bloomfield","cityAliasMixedCase":"West Bloomfield","stateAnsi":26,"countyAnsi":125}]}'
     http_version: '1.1'

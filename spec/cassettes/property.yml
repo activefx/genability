@@ -16,21 +16,25 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:31:42 GMT
+      - Sat, 05 May 2012 18:43:44 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
-      transfer-encoding:
-      - chunked
+      content-length:
+      - '780'
       connection:
       - keep-alive
     body: ! '{"status":"success","count":1,"type":"PropertyKey","results":[{"keyName":"connectionType","displayName":"Connection
-      Type","family":"service","keyspace":"electricity","description":"Where/how the
-      service is connected to the grid (e.g. primary, transmission, subtransmission).","dataType":"CHOICE","choices":[{"value":"Secondary
+      Type","family":"connection","keyspace":"electricity","description":"Where or
+      how the service is connected to the grid (e.g. primary, transmission, subtransmission).","dataType":"CHOICE","choices":[{"value":"Secondary
       Connection","displayValue":"Secondary Connection"},{"value":"Primary Connection","displayValue":"Primary
       Connection"},{"value":"Subtransmission Connection","displayValue":"Subtransmission
       Connection"},{"value":"Transmission Connection","displayValue":"Transmission
-      Connection"},{"value":"High Voltage","displayValue":"High Voltage"}]}]}'
+      Connection"},{"value":"High Voltage","displayValue":"High Voltage"},{"value":"Backbone
+      Transmission (115 kV and Above)","displayValue":"Backbone Transmission (115
+      kV and Above)"}]}]}'
     http_version: '1.1'

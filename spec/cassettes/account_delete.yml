@@ -16,23 +16,25 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Wed, 18 Jan 2012 06:27:55 GMT
+      - Sat, 05 May 2012 18:43:26 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"5b4b2133-760a-44ac-81f8-42915b2a77cf","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
-      Delete Account Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null}]}'
+    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"dfda7789-c8f5-4f5c-9d9c-aa844b5a0009","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
+      Delete Account Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null,"tariffs":null}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :delete
-    uri: http://api.genability.com:80/rest/beta/accounts/5b4b2133-760a-44ac-81f8-42915b2a77cf?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/beta/accounts/dfda7789-c8f5-4f5c-9d9c-aa844b5a0009?appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers:
       accept:
@@ -44,10 +46,12 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Wed, 18 Jan 2012 06:28:07 GMT
+      - Sat, 05 May 2012 18:43:27 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:

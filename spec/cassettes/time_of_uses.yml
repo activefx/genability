@@ -16,10 +16,12 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:31:33 GMT
+      - Sat, 05 May 2012 18:43:30 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:

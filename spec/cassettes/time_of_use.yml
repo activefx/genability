@@ -16,26 +16,42 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:31:23 GMT
+      - Sat, 05 May 2012 18:43:30 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":11,"type":"TimeOfUseGroup","results":[{"touName":"Winter  Off
-      Peak","touGroupId":1,"fromDateTime":"2012-01-17T10:31:23.317-08:00","toDateTime":"2012-01-17T17:00:00.000-08:00","touId":776,"calendarId":null},{"touName":"Winter  Partial
-      Peak","touGroupId":1,"fromDateTime":"2012-01-17T17:00:00.000-08:00","toDateTime":"2012-01-17T20:00:00.000-08:00","touId":775,"calendarId":null},{"touName":"Winter  Off
-      Peak","touGroupId":1,"fromDateTime":"2012-01-17T20:00:00.000-08:00","toDateTime":"2012-01-18T17:00:00.000-08:00","touId":776,"calendarId":null},{"touName":"Winter  Partial
-      Peak","touGroupId":1,"fromDateTime":"2012-01-18T17:00:00.000-08:00","toDateTime":"2012-01-18T20:00:00.000-08:00","touId":775,"calendarId":null},{"touName":"Winter  Off
-      Peak","touGroupId":1,"fromDateTime":"2012-01-18T20:00:00.000-08:00","toDateTime":"2012-01-19T17:00:00.000-08:00","touId":776,"calendarId":null},{"touName":"Winter  Partial
-      Peak","touGroupId":1,"fromDateTime":"2012-01-19T17:00:00.000-08:00","toDateTime":"2012-01-19T20:00:00.000-08:00","touId":775,"calendarId":null},{"touName":"Winter  Off
-      Peak","touGroupId":1,"fromDateTime":"2012-01-19T20:00:00.000-08:00","toDateTime":"2012-01-20T17:00:00.000-08:00","touId":776,"calendarId":null},{"touName":"Winter  Partial
-      Peak","touGroupId":1,"fromDateTime":"2012-01-20T17:00:00.000-08:00","toDateTime":"2012-01-20T20:00:00.000-08:00","touId":775,"calendarId":null},{"touName":"Winter  Off
-      Peak","touGroupId":1,"fromDateTime":"2012-01-20T20:00:00.000-08:00","toDateTime":"2012-01-23T17:00:00.000-08:00","touId":776,"calendarId":null},{"touName":"Winter  Partial
-      Peak","touGroupId":1,"fromDateTime":"2012-01-23T17:00:00.000-08:00","toDateTime":"2012-01-23T20:00:00.000-08:00","touId":775,"calendarId":null},{"touName":"Winter  Off
-      Peak","touGroupId":1,"fromDateTime":"2012-01-23T20:00:00.000-08:00","toDateTime":"2012-01-24T10:31:23.317-08:00","touId":776,"calendarId":null}]}'
+    body: ! '{"status":"success","count":25,"type":"TimeOfUseGroup","results":[{"touName":"Summer
+      Partial Peak 2","touGroupId":1,"fromDateTime":"2012-05-05T18:43:30-07:00","toDateTime":"2012-05-05T20:00:00-07:00","touId":774,"calendarId":null},{"touName":"Summer  Off
+      Peak","touGroupId":1,"fromDateTime":"2012-05-05T20:00:00-07:00","toDateTime":"2012-05-06T17:00:00-07:00","touId":777,"calendarId":null},{"touName":"Summer
+      Partial Peak 2","touGroupId":1,"fromDateTime":"2012-05-06T17:00:00-07:00","toDateTime":"2012-05-06T20:00:00-07:00","touId":774,"calendarId":null},{"touName":"Summer  Off
+      Peak","touGroupId":1,"fromDateTime":"2012-05-06T20:00:00-07:00","toDateTime":"2012-05-07T10:00:00-07:00","touId":777,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-07T10:00:00-07:00","toDateTime":"2012-05-07T13:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer
+      Peak","touGroupId":1,"fromDateTime":"2012-05-07T13:00:00-07:00","toDateTime":"2012-05-07T19:00:00-07:00","touId":772,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-07T19:00:00-07:00","toDateTime":"2012-05-07T21:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer  Off
+      Peak","touGroupId":1,"fromDateTime":"2012-05-07T21:00:00-07:00","toDateTime":"2012-05-08T10:00:00-07:00","touId":777,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-08T10:00:00-07:00","toDateTime":"2012-05-08T13:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer
+      Peak","touGroupId":1,"fromDateTime":"2012-05-08T13:00:00-07:00","toDateTime":"2012-05-08T19:00:00-07:00","touId":772,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-08T19:00:00-07:00","toDateTime":"2012-05-08T21:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer  Off
+      Peak","touGroupId":1,"fromDateTime":"2012-05-08T21:00:00-07:00","toDateTime":"2012-05-09T10:00:00-07:00","touId":777,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-09T10:00:00-07:00","toDateTime":"2012-05-09T13:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer
+      Peak","touGroupId":1,"fromDateTime":"2012-05-09T13:00:00-07:00","toDateTime":"2012-05-09T19:00:00-07:00","touId":772,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-09T19:00:00-07:00","toDateTime":"2012-05-09T21:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer  Off
+      Peak","touGroupId":1,"fromDateTime":"2012-05-09T21:00:00-07:00","toDateTime":"2012-05-10T10:00:00-07:00","touId":777,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-10T10:00:00-07:00","toDateTime":"2012-05-10T13:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer
+      Peak","touGroupId":1,"fromDateTime":"2012-05-10T13:00:00-07:00","toDateTime":"2012-05-10T19:00:00-07:00","touId":772,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-10T19:00:00-07:00","toDateTime":"2012-05-10T21:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer  Off
+      Peak","touGroupId":1,"fromDateTime":"2012-05-10T21:00:00-07:00","toDateTime":"2012-05-11T10:00:00-07:00","touId":777,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-11T10:00:00-07:00","toDateTime":"2012-05-11T13:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer
+      Peak","touGroupId":1,"fromDateTime":"2012-05-11T13:00:00-07:00","toDateTime":"2012-05-11T19:00:00-07:00","touId":772,"calendarId":null},{"touName":"Summer
+      Partial Peak","touGroupId":1,"fromDateTime":"2012-05-11T19:00:00-07:00","toDateTime":"2012-05-11T21:00:00-07:00","touId":773,"calendarId":null},{"touName":"Summer  Off
+      Peak","touGroupId":1,"fromDateTime":"2012-05-11T21:00:00-07:00","toDateTime":"2012-05-12T17:00:00-07:00","touId":777,"calendarId":null},{"touName":"Summer
+      Partial Peak 2","touGroupId":1,"fromDateTime":"2012-05-12T17:00:00-07:00","toDateTime":"2012-05-12T18:43:30-07:00","touId":774,"calendarId":null}]}'
     http_version: '1.1'

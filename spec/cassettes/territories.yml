@@ -16,39 +16,41 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:31:30 GMT
+      - Sat, 05 May 2012 18:43:44 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
-      content-length:
-      - '2517'
+      transfer-encoding:
+      - chunked
       connection:
       - keep-alive
     body: ! '{"status":"success","count":11,"type":"Territory","results":[{"territoryId":807,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":null,"territoryName":"Service area for
-      CA","usageType":"SERVICE","itemTypes":"COUNTY","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3534,"lseId":734,"lseName":"Pacific
+      CA","usageType":"SERVICE","itemTypes":"COUNTY","deregRes":false,"deregCandi":false},{"territoryId":3534,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      P","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3535,"lseId":734,"lseName":"Pacific
+      P","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3535,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      Q","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3536,"lseId":734,"lseName":"Pacific
+      Q","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3536,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      R","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3537,"lseId":734,"lseName":"Pacific
+      R","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3537,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      S","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3538,"lseId":734,"lseName":"Pacific
+      S","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3538,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      T","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3539,"lseId":734,"lseName":"Pacific
+      T","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3539,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      V","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3540,"lseId":734,"lseName":"Pacific
+      V","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3540,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      W","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3541,"lseId":734,"lseName":"Pacific
+      W","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3541,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      X","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3542,"lseId":734,"lseName":"Pacific
+      X","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3542,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      Y","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false},{"territoryId":3543,"lseId":734,"lseName":"Pacific
+      Y","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false},{"territoryId":3543,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      Z","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false}]}'
+      Z","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
@@ -67,10 +69,12 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Tue, 17 Jan 2012 10:31:41 GMT
+      - Sat, 05 May 2012 18:43:44 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
@@ -79,5 +83,5 @@
       - keep-alive
     body: ! '{"status":"success","count":1,"type":"Territory","results":[{"territoryId":3538,"lseId":734,"lseName":"Pacific
       Gas & Electric Co","parentTerritoryId":807,"territoryName":"Baseline Region
-      T","usageType":"TARIFF","itemTypes":"ZIPCODE","items":null,"deregRes":false,"deregCandi":false}]}'
+      T","usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false}]}'
     http_version: '1.1'

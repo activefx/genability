@@ -16,24 +16,26 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:06:07 GMT
+      - Sat, 05 May 2012 18:43:32 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"81f16ab4-d305-4e24-8bd1-586e8ce90b66","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
-      Usage Profiles Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null}]}'
+    body: ! '{"status":"success","count":1,"type":"Account","results":[{"accountId":"8c722ec2-980c-46ac-a811-904ba6abf5b8","providerAccountId":null,"providerOrgId":"403b8a29-71aa-481a-9b5f-72fb9416f8ab","accountName":"Ruby
+      Usage Profiles Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","properties":null,"tariffs":null}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :post
     uri: http://api.genability.com:80/rest/beta/usage/profiles?appId=ValidAppID&appKey=ValidAppKey
-    body: ! '{"accountId":"81f16ab4-d305-4e24-8bd1-586e8ce90b66"}'
+    body: ! '{"accountId":"8c722ec2-980c-46ac-a811-904ba6abf5b8"}'
     headers:
       accept:
       - application/json; charset=utf-8
@@ -46,22 +48,24 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:05:56 GMT
+      - Sat, 05 May 2012 18:43:32 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
-      content-length:
-      - '269'
+      transfer-encoding:
+      - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"84e33287-e4b1-4c4b-8e5e-112f6a3e23f4","profileName":null,"accountId":"81f16ab4-d305-4e24-8bd1-586e8ce90b66","description":null,"sourceId":null,"readingDataSummaries":null,"readingData":null}]}'
+    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"083a4668-2b2d-443b-b871-7c08b1bcd190","accountId":"8c722ec2-980c-46ac-a811-904ba6abf5b8","dataStatus":null}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://api.genability.com:80/rest/beta/usage/profiles?accountId=81f16ab4-d305-4e24-8bd1-586e8ce90b66&appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/beta/usage/profiles?accountId=8c722ec2-980c-46ac-a811-904ba6abf5b8&appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers:
       accept:
@@ -75,22 +79,24 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:06:09 GMT
+      - Sat, 05 May 2012 18:43:32 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"84e33287-e4b1-4c4b-8e5e-112f6a3e23f4","profileName":null,"accountId":"81f16ab4-d305-4e24-8bd1-586e8ce90b66","description":null,"sourceId":null,"readingDataSummaries":null,"readingData":null}]}'
+    body: ! '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"083a4668-2b2d-443b-b871-7c08b1bcd190","accountId":"8c722ec2-980c-46ac-a811-904ba6abf5b8","dataStatus":null}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :delete
-    uri: http://api.genability.com:80/rest/beta/accounts/81f16ab4-d305-4e24-8bd1-586e8ce90b66?appId=ValidAppID&appKey=ValidAppKey
+    uri: http://api.genability.com:80/rest/beta/accounts/8c722ec2-980c-46ac-a811-904ba6abf5b8?appId=ValidAppID&appKey=ValidAppKey
     body: 
     headers:
       accept:
@@ -102,10 +108,12 @@
       code: 200
       message: OK
     headers:
+      access-control-allow-origin:
+      - ! '*'
       content-type:
       - application/json;charset=utf-8
       date:
-      - Fri, 20 Jan 2012 13:05:58 GMT
+      - Sat, 05 May 2012 18:43:33 GMT
       server:
       - Apache/2.2.16 (Ubuntu)
       transfer-encoding:

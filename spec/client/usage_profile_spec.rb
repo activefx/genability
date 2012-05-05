@@ -75,6 +75,44 @@ describe Genability::Client do
 
       end
 
+      context ".bulk_upload" do
+
+#        context "with CSV" do
+
+#          use_vcr_cassette "bulk_upload_csv"
+
+#          it "should accept properly formatted CSV files" do
+#            @account = @client.add_account(:account_name => 'Ruby Bulk Upload Test')
+#            @usage_profile = @client.add_usage_profile(:account_id => @account.account_id)
+#            @result = @client.bulk_upload(
+#              File.expand_path("../../fixtures/sample.csv", __FILE__),
+#              :usage_profile_id => @usage_profile.profile_id
+#            )
+#            @result.status.should == "success"
+#            @client.delete_account(@account.account_id)
+#          end
+
+#        end
+
+        context "with ESPI (Green Button XML)" do
+
+          use_vcr_cassette "green_button"
+
+          it "should accept properly formatted XML files" do
+            @account = @client.add_account(:account_name => 'Ruby Green Button Test')
+            @usage_profile = @client.add_usage_profile(:account_id => @account.account_id)
+            @result = @client.green_button(
+              File.expand_path("../../fixtures/greenbutton.xml", __FILE__),
+              :usage_profile_id => @usage_profile.profile_id
+            )
+            @result.status.should == "success"
+            @client.delete_account(@account.account_id)
+          end
+
+        end
+
+      end
+
     end
   end
 end
